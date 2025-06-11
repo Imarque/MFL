@@ -1,0 +1,164 @@
+26-05-2025 16:53:12|Account|ActionResult Login|Session Clear
+26-05-2025 16:53:12|Account|ActionResult Login|Start
+26-05-2025 16:54:33|Account|ActionResult Login|Session Clear
+26-05-2025 16:54:33|Account|ActionResult Login|Start
+26-05-2025 16:54:34|Account|ActionResult Login|Session Clear
+26-05-2025 16:54:34|Account|ActionResult Login|Start
+26-05-2025 16:54:34|Account|ActionResult Login|Session Clear
+26-05-2025 16:54:34|Account|ActionResult Login|Start
+26-05-2025 16:54:35|Account|ActionResult Login|Session Clear
+26-05-2025 16:54:35|Account|ActionResult Login|Start
+26-05-2025 16:54:36|Account|ActionResult Login|Session Clear
+26-05-2025 16:54:36|Account|ActionResult Login|Start
+26-05-2025 16:55:10|Account|ActionResult Login|Session Clear
+26-05-2025 16:55:10|Account|ActionResult Login|Start
+26-05-2025 16:55:11|Account|ActionResult Login|Session Clear
+26-05-2025 16:55:11|Account|ActionResult Login|Start
+26-05-2025 16:55:11|Account|ActionResult Login|Session Clear
+26-05-2025 16:55:11|Account|ActionResult Login|Start
+26-05-2025 16:55:11|Account|ActionResult Login|Session Clear
+26-05-2025 16:55:11|Account|ActionResult Login|Start
+26-05-2025 16:55:15|Account|ActionResult Login|Session Clear
+26-05-2025 16:55:15|Account|ActionResult Login|Start
+26-05-2025 16:57:35|Account|ActionResult Login|Session Clear
+26-05-2025 16:57:35|Account|ActionResult Login|Start
+26-05-2025 17:01:04|Account|ActionResult Login|Session Clear
+26-05-2025 17:01:04|Account|ActionResult Login|Start
+26-05-2025 17:04:42|Account|ActionResult Login|Session Clear
+26-05-2025 17:04:42|Account|ActionResult Login|Start
+26-05-2025 17:05:59|Account|ActionResult Login|Session Clear
+26-05-2025 17:05:59|Account|ActionResult Login|Start
+26-05-2025 17:07:05|Account|ActionResult Login|Session Clear
+26-05-2025 17:07:05|Account|ActionResult Login|Start
+26-05-2025 17:07:22|Account|ActionResult Login|Session Clear
+26-05-2025 17:07:22|Account|ActionResult Login|Start
+26-05-2025 17:10:51|Account|ActionResult Login|Session Clear
+26-05-2025 17:10:51|Account|ActionResult Login|Start
+26-05-2025 17:12:34|Account|ActionResult Login|Session Clear
+26-05-2025 17:12:34|Account|ActionResult Login|Start
+26-05-2025 17:16:07|Account|ActionResult Login|Session Clear
+26-05-2025 17:16:07|Account|ActionResult Login|Start
+26-05-2025 17:18:05|Account|ActionResult Login|Session Clear
+26-05-2025 17:18:05|Account|ActionResult Login|Start
+26-05-2025 17:24:32|Account|ActionResult Login|Session Clear
+26-05-2025 17:24:32|Account|ActionResult Login|Start
+26-05-2025 17:37:07|Account|ActionResult Login|Session Clear
+26-05-2025 17:37:07|Account|ActionResult Login|Start
+26-05-2025 17:37:15|Account|ActionResult Login|Session Clear
+26-05-2025 17:37:15|Account|ActionResult Login|Start
+26-05-2025 17:37:20|Account|ActionResult Login|Session Clear
+26-05-2025 17:37:20|Account|ActionResult Login|Start
+26-05-2025 17:37:22|Account|ActionResult Login|Session Clear
+26-05-2025 17:37:22|Account|ActionResult Login|Start
+26-05-2025 17:37:29|Account|ActionResult Login|Session Clear
+26-05-2025 17:37:29|Account|ActionResult Login|Start
+26-05-2025 17:40:19|Account|ActionResult Login|Session Clear
+26-05-2025 17:40:19|Account|ActionResult Login|Start
+26-05-2025 17:45:09|Account|ActionResult Login|Session Clear
+26-05-2025 17:45:09|Account|ActionResult Login|Start
+26-05-2025 17:49:15|Account|ActionResult Login|Session Clear
+26-05-2025 17:49:15|Account|ActionResult Login|Start
+26-05-2025 17:50:26|Account|ActionResult Login|Session Clear
+26-05-2025 17:50:26|Account|ActionResult Login|Start
+26-05-2025 17:52:01|Account|ActionResult Login|Session Clear
+26-05-2025 17:52:01|Account|ActionResult Login|Start
+26-05-2025 17:52:31|Account|ActionResult Login|Session Clear
+26-05-2025 17:52:31|Account|ActionResult Login|Start
+26-05-2025 17:52:46|Account|ActionResult Login|Session Clear
+26-05-2025 17:52:46|Account|ActionResult Login|Start
+26-05-2025 17:53:15|Account|ActionResult Login|Session Clear
+26-05-2025 17:53:15|Account|ActionResult Login|Start
+26-05-2025 17:53:19|Account|ActionResult Login|Session Clear
+26-05-2025 17:53:19|Account|ActionResult Login|Start
+26-05-2025 17:53:38|Account|ActionResult Login|Session Clear
+26-05-2025 17:53:38|Account|ActionResult Login|Start
+26-05-2025 17:54:19|Account|ActionResult Login|Session Clear
+26-05-2025 17:54:19|Account|ActionResult Login|Start
+26-05-2025 17:55:49|Account|ActionResult Login|Session Clear
+26-05-2025 17:55:49|Account|ActionResult Login|Start
+26-05-2025 17:56:14|Account|ActionResult Login|Session Clear
+26-05-2025 17:56:14|Account|ActionResult Login|Start
+26-05-2025 17:56:48|Account|ActionResult Login|Session Clear
+26-05-2025 17:56:48|Account|ActionResult Login|Start
+26-05-2025 17:56:56|Account|JsonResult Login|Start
+26-05-2025 17:57:06|Account|JsonResult Login|A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+26-05-2025 17:57:13|Account|ActionResult Login|Session Clear
+26-05-2025 17:57:13|Account|ActionResult Login|Start
+26-05-2025 17:57:27|Account|ActionResult Login|Session Clear
+26-05-2025 17:57:27|Account|ActionResult Login|Start
+26-05-2025 17:57:34|Account|JsonResult Login|Start
+26-05-2025 17:57:38|Account|JsonResult Login|A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+26-05-2025 17:57:56|Account|ActionResult Login|Session Clear
+26-05-2025 17:57:56|Account|ActionResult Login|Start
+26-05-2025 17:58:02|Account|JsonResult Login|Start
+26-05-2025 17:58:52|Account|JsonResult Login|A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+26-05-2025 17:59:46|Account|ActionResult Login|Session Clear
+26-05-2025 17:59:46|Account|ActionResult Login|Start
+26-05-2025 17:59:56|Account|JsonResult Login|Start
+26-05-2025 17:59:59|Account|JsonResult Login|The SelectCommand property has not been initialized before calling 'Fill'.
+26-05-2025 18:00:14|Account|ActionResult Login|Session Clear
+26-05-2025 18:00:14|Account|ActionResult Login|Start
+26-05-2025 18:00:24|Account|JsonResult Login|Start
+26-05-2025 18:01:12|Account|JsonResult Login|The SelectCommand property has not been initialized before calling 'Fill'.
+26-05-2025 18:01:18|Account|ActionResult Login|Session Clear
+26-05-2025 18:01:18|Account|ActionResult Login|Start
+26-05-2025 18:01:35|Account|JsonResult Login|Start
+26-05-2025 18:01:46|Account|JsonResult Login|The SelectCommand property has not been initialized before calling 'Fill'.
+26-05-2025 18:03:09|Account|ActionResult Login|Session Clear
+26-05-2025 18:03:09|Account|ActionResult Login|Start
+26-05-2025 18:03:20|Account|JsonResult Login|Start
+26-05-2025 18:03:26|Account|JsonResult Login|Invalid user id
+26-05-2025 18:03:32|Account|ActionResult Login|Session Clear
+26-05-2025 18:03:32|Account|ActionResult Login|Start
+26-05-2025 18:03:39|Account|JsonResult Login|Start
+26-05-2025 18:03:50|Account|JsonResult Login|Invalid user id
+26-05-2025 18:04:58|Account|ActionResult Login|Session Clear
+26-05-2025 18:04:58|Account|ActionResult Login|Start
+26-05-2025 18:05:05|Account|JsonResult Login|Start
+26-05-2025 18:05:06|Account|JsonResult Login|Start
+26-05-2025 18:05:06|Account|JsonResult Login|Invalid user id
+26-05-2025 18:05:06|Account|JsonResult Login|Invalid user ID or Wrong Password
+26-05-2025 18:05:15|Account|ActionResult Login|Session Clear
+26-05-2025 18:05:15|Account|ActionResult Login|Start
+26-05-2025 18:05:23|Account|JsonResult Login|Start
+26-05-2025 18:05:23|Account|JsonResult Login|Start
+26-05-2025 18:05:27|Account|JsonResult Login|Invalid user id
+26-05-2025 18:05:27|Account|JsonResult Login|Invalid user ID or Wrong Password
+26-05-2025 18:06:57|Account|JsonResult Login|Start
+26-05-2025 18:06:57|Account|JsonResult Login|Invalid user ID or Wrong Password
+26-05-2025 18:07:00|Account|ActionResult Login|Session Clear
+26-05-2025 18:07:00|Account|ActionResult Login|Start
+26-05-2025 18:07:13|Account|JsonResult Login|Start
+26-05-2025 18:07:13|Account|JsonResult Login|Invalid user id
+26-05-2025 18:07:23|Account|JsonResult Login|Start
+26-05-2025 18:07:23|Account|JsonResult Login|Invalid user id
+26-05-2025 18:26:22|Account|JsonResult Login|Start
+26-05-2025 18:26:38|Account|JsonResult Login|Invalid user id
+26-05-2025 18:27:25|Account|JsonResult Login|Start
+26-05-2025 18:27:40|Account|JsonResult Login|Invalid user id
+26-05-2025 18:28:53|Account|JsonResult Login|Start
+26-05-2025 18:29:02|Account|JsonResult Login|Invalid user id
+26-05-2025 18:39:59|Account|ActionResult Login|Session Clear
+26-05-2025 18:39:59|Account|ActionResult Login|Start
+26-05-2025 18:40:06|Account|JsonResult Login|Start
+26-05-2025 18:40:18|Account|JsonResult Login|Invalid user ID or Wrong Password
+26-05-2025 18:40:25|Account|JsonResult Login|Start
+26-05-2025 18:40:32|Account|JsonResult Login|Login Success
+26-05-2025 18:42:02|Account|ActionResult Login|Session Clear
+26-05-2025 18:42:02|Account|ActionResult Login|Start
+26-05-2025 18:42:18|Account|JsonResult Login|Start
+26-05-2025 18:42:21|Account|JsonResult Login|Invalid user ID or Wrong Password
+26-05-2025 18:42:34|Account|JsonResult Login|Start
+26-05-2025 18:42:39|Account|JsonResult Login|Login Success
+26-05-2025 18:52:31|Account|ActionResult Login|Session Clear
+26-05-2025 18:52:31|Account|ActionResult Login|Start
+26-05-2025 18:52:38|Account|JsonResult Login|Start
+26-05-2025 18:52:38|Account|JsonResult Login|Invalid user ID or Wrong Password
+26-05-2025 18:52:45|Account|JsonResult Login|Start
+26-05-2025 18:52:45|Account|JsonResult Login|Login Success
+26-05-2025 18:56:36|Account|ActionResult Login|Session Clear
+26-05-2025 18:56:36|Account|ActionResult Login|Start
+26-05-2025 18:56:45|Account|JsonResult Login|Start
+26-05-2025 18:56:45|Account|JsonResult Login|Invalid user ID or Wrong Password
+26-05-2025 18:56:53|Account|JsonResult Login|Start
+26-05-2025 18:56:53|Account|JsonResult Login|Login Success

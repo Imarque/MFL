@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "AdminHome";
+}
+<link rel="stylesheet" href="~/sytlesheets/tailwind.min.css" asp-append-version="true" />
+<script src="~/sytlesheets/feather-icons.js"></script>
+
+<div class="mx-auto px-4 py-8" style="margin-top: 80px;">
+    <h2 class="text-center text-2xl font-bold p-2 rounded border border-primary text-uppercase head"
+        style="background: linear-gradient(to left, #7ecbff, #0033a0); color: white;">
+        Administrator
+    </h2>
+    <div class="mt-10 flex flex-col md:flex-row gap-6 justify-center">
+        <div id="btnBaseupload" style="cursor: pointer;">
+        <div class="bg-white border-2 border-blue-500 p-6 rounded-xl shadow-lg w-80 relative text-center button cardbg scroll-left">
+            <h2 class="text-xl font-bold">BASE UPLOAD</h2>
+            <hr class="my-4">
+            <div class="my-6 flex justify-center" style="margin-top:150px;">
+                <i data-feather="upload-cloud" class="w-20 h-20 text-blue-600"></i>
+            </div>
+            <button class="mt-6 w-full bg-blue-600 text-white py-2 rounded-md fw-bold" style="margin-top:150px;">Base Upload</button>
+        </div>
+        </div>
+        <div id="btnUser" style="cursor: pointer;">
+            <div class="bg-white border-2 border-blue-500 p-6 rounded-xl shadow-lg w-80 relative text-center button cardbg scroll-right">
+                <h2 class="text-xl font-bold uppercase">User Management</h2>
+                <hr class="my-4">
+                <div class="my-6 flex justify-center" style="margin-top:150px;">
+                    <i data-feather="users" class="w-20 h-20 text-blue-600"></i>
+                </div>
+                <button class="mt-6 w-full bg-blue-600 text-white py-2 rounded-md fw-bold" style="margin-top:150px;">User Management</button>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-2"><small>&copy; @DateTime.Now.Year - IMarque. All rights reserved.</small></div>
+</div>
+<script>
+    feather.replace();
+</script>
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#btnBaseupload').click(function () {
+            window.location.href='@Url.Content("~/")'+'Upload/Upload';
+        });
+    });
+    $(document).ready(function () {
+        $('#btnUser').click(function () {
+            window.location.href='@Url.Content("~/")'+'UserManager/UserList';
+        });
+    });
+</script>
+<style>
+    .head {
+        animation: scrolldown 1s ease-in;
+    }
+
+    @@keyframes scrolldown {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .scroll-left {
+        animation: scrollleft 1s ease-in;
+    }
+
+    .scroll-right {
+        animation: scrollright 1s ease-in;
+    }
+
+    @@keyframes scrollleft {
+        from {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @@keyframes scrollright {
+        from {
+            transform: translateX(50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+</style>

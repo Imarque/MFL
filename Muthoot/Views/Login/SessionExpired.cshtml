@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewData["Title"] = "SessionExpired";
+    var redirectUrl = Url.Action("Login", "Login");
+}
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8f9fa;
+    }
+
+    .session-container {
+        max-width: 600px;
+        margin: 100px auto;
+        text-align: center;
+        padding: 30px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-in;
+    }
+
+        .session-container h2 {
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+
+        .session-container p {
+            font-size: 18px;
+            color: #6c757d;
+        }
+
+        .session-container .btn {
+            margin-top: 25px;
+            padding: 10px 25px;
+            font-size: 16px;
+        }
+
+    .countdown {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #888;
+    }
+
+    @@keyframes fadeIn {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+</style>
+
+<div class="session-container">
+    <h2>⚠️ Session Expired</h2>
+    <p>Your session has ended due to inactivity.<br />You will be redirected to the login page shortly.</p>
+
+    <a href="@redirectUrl" class="btn btn-primary">Login Now</a>
+
+    <div class="countdown">
+        Redirecting in <span id="countdown">10</span> seconds...
+    </div>
+    <div class="text-center mt-2"><small>&copy; @DateTime.Now.Year - IMarque. All rights reserved.</small></div>
+</div>
+
+<script>
+    let seconds = 10;
+    const countdown = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+        seconds--;
+        countdown.textContent = seconds;
+        if (seconds <= 0) {
+            clearInterval(interval);
+            window.location.href = "@redirectUrl";
+        }
+    }, 1000);
+</script>
+

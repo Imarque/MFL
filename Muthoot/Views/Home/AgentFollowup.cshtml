@@ -1,0 +1,250 @@
+﻿@model Muthoot.Models.AgentFollowup
+@{
+    ViewData["Title"] = "AgentFollowup";
+}
+
+<div class="container p-2 rounded" style="margin-top:80px;">
+    <h2 class="text-center p-1 rounded text-uppercase border border-primary" style="background: linear-gradient(to left, #7ecbff, #0033a0);color:white"><i class="fa-solid fa-phone-volume"></i>  agent followup</h2>
+    <div class="justify-content-center d-flex flex-wrap gap-3">
+        <div class="border rounded shadow-sm p-3 border-primary-subtle bg-white text-center d-flex flex-column align-items-center justify-content-center cardbg6"
+             style="min-width: 250px; max-width: 220px; height: auto;">
+            <div class="mb-2">
+                <i class="fa-solid fa-phone-volume fa-5x text-primary"></i>
+            </div>
+        </div>
+        @foreach (var item in Model.StageFollowupList)
+        {
+            <div class="border rounded shadow-sm p-3 border-primary-subtle bg-white cardbg6" style="min-width: 250px; max-width: 220px; height: auto;">
+                <div class="content">
+
+                    
+                    <div class="text-primary text-center fw-semibold rounded py-2 mb-2 fs-6">
+                        @item.Title
+                    </div>
+
+                    
+                    <div class="d-flex justify-content-between text-secondary small mb-1">
+                        <span>Total</span>
+                        <strong>@item.TotalCount</strong>
+                    </div>
+                    <div class="progress mb-2" style="height: 6px;">
+                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 100%"></div>
+                    </div>
+
+                    
+                    <div class="d-flex justify-content-between text-success small mb-1">
+                        <span>Completed</span>
+                        <strong>@item.Completed</strong>
+                    </div>
+                    <div class="progress mb-2" style="height: 6px;">
+                        <div class="progress-bar bg-success" role="progressbar"
+                             style="width: @(item.TotalCount == 0 ? 0 : ((item.Completed * 100) / item.TotalCount))%"></div>
+                    </div>
+
+                    
+                    <div class="d-flex justify-content-between text-danger small mb-1">
+                        <span>Pending</span>
+                        <strong>@item.PendingCount</strong>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                        <div class="progress-bar bg-danger" role="progressbar"
+                             style="width: @(item.TotalCount == 0 ? 0 : ((item.PendingCount * 100) / item.TotalCount))%"></div>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+    <div class="container p-5 rounded shadow mt-4 bg-white cardbg4">
+        <div class="row">
+            @using (Html.BeginForm())
+            {
+                <div class="row">
+                    <div class="col-lg-2 col-md-6 col-sm-6 mt-lg-0 mt-2">
+                        @Html.LabelFor(m => m.StartDate)
+                        @Html.TextBoxFor(m => m.StartDate, new { @type = "date", @class = "form-control border border-primary", @id = "txtstarttDate" })
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 mt-lg-0 mt-2">
+                        @Html.LabelFor(m => m.EndDate)
+                        @Html.TextBoxFor(m => m.EndDate, new { @type = "date", @class = "form-control border border-primary", @id = "txtendDate" })
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 mt-lg-0 mt-2">
+                        @Html.LabelFor(m => m.Followup)
+                        @Html.DropDownListFor(m => m.Followup, Model.FollowupList, "Select Type", new { @class = "form-control border border-primary", @id = "ddlfollwup" })
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 mt-lg-0 mt-2">
+                        @Html.LabelFor(m => m.Dialer_Config, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(m => m.Dialer_Config, new { htmlAttributes = new { @class = "form-control input-lg", @id = "Dialer_Config" } })
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-sm-12 mt-lg-4 mt-2">
+                        <button type="submit" onclick="return Validate()" class="btn btn-primary button form-control" id="btnSub"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                    </div>
+                </div>
+            }
+            <div class="mt-5 d-flex align-items-center gap-2">
+                <label for="count" class="text-success fw-bold fst-italic mb-0">
+                    <i class="bi bi-search"></i> Total Records Found:
+                </label>
+                <span id="count" class="text-success fw-bold fs-5">@ViewBag.RecordCount</span>
+            </div>
+            <h4 class="text-center p-1 mt-4 rounded-5 text-uppercase">Followups</h4>
+            <hr />
+            @if (Model != null && Model.AgentFollowupLists != null && Model.AgentFollowupLists.Any())
+            {
+                <div style="max-height: 500px; overflow: auto; border: 1px solid #ccc;" class="border border-primary rounded">
+                    <table class="table table-bordered table-striped" style="border-collapse: collapse; width: 100%;">
+                        <thead>
+                            <tr style="background-color: #007bff; color: white; position: sticky; top: 0; z-index: 2;">
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Action</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">S.No.</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Stage</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Customer Name</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Mobile Number</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Disposition</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Followup Date</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Created By</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Created On</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int serial = 1;
+                            }
+                            @foreach (var item in Model.AgentFollowupLists)
+                            {
+                                <tr>
+                                    <td style="padding: 8px; white-space: nowrap;">
+                                        <button class="btn btn-sm btn-primary" onclick="event.preventDefault(); return Dial('@item.MobileNumberHidden')">Dial</button>
+                                    </td>
+                                    <td style="padding: 8px; white-space: nowrap;">@serial</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.Stage</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.CustomerName</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.MobileNumber</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.Disposition</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.FollowupDate</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.CreatedBy</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.CreatedOn</td>
+                                </tr>
+                                serial++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="text-center mt-2"><small>&copy; @DateTime.Now.Year - IMarque. All rights reserved.</small></div>
+</div>
+@*<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>*@
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script>
+        //$(document).ready(function () {
+        //    setTimeout(function () {
+        //        $('#errorMessage').fadeOut('slow');
+        //    }, 5000);
+        //});
+        //$(document).ready(function () {
+        //    setTimeout(function () {
+        //        $('#Message').fadeOut('slow');
+        //    }, 5000);
+        //});
+        function Validate() {
+            var startDate = $("#txtstarttDate").val();
+            var endDate = $("#txtendDate").val();
+            $('.spinner').css('display', 'block').fadeIn();
+            if (!startDate || !endDate) {
+                /*alert("Please enter both Start Date and End Date.");*/
+                snackBar("danger", "Please enter both Start Date and End Date.", "✘", 5000, "0.5s", "tr");
+                return false;
+            }
+
+            var start = new Date(startDate);
+            var end = new Date(endDate);
+
+            if (start > end) {
+                /*alert("Start Date cannot be greater than End Date.");*/
+                snackBar("danger", "Start Date cannot be greater than End Date.", "✘", 5000, "0.5s", "tr");
+                return false;
+            }
+
+            return true;
+        }
+        $(document).ready(function () {
+    @if (TempData["Message"] != null)
+    {
+        <text>
+                            snackBar("success", "@TempData["Message"]", "✔", 5000, "0.5s", "tr");
+        </text>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <text>
+                            snackBar("danger", "@TempData["ErrorMessage"]", "✘", 5000, "0.5s", "tr");
+        </text>
+    }
+        });
+        function Dial(mobileNo) {
+        try {
+            $('.spinner').fadeIn();
+
+            var dialerConfig = $('#Dialer_Config').val();
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Content("~/")' + "Home/Encrypt?mobileNo=" + mobileNo + "&Dialer_config=" + dialerConfig,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    $('.spinner').fadeOut();
+
+                    if (result && result.mobileNo) {
+                        $('#mobileNo').val(result.mobileNo);
+
+                        if (!dialerConfig) {
+                            window.open('@Url.Content("~/")' + 'Home/CRM?searchBy=MobileNo&value=' + encodeURIComponent(result.mobileNo));
+                        }
+                    } else {
+                        snackBar("danger", "Something went wrong", "✘", 5000, "0.5s", "tr");
+                    }
+                },
+                error: function (result) {
+                    $('.spinner').fadeOut();
+                    snackBar("danger", result.responseText, "✘", 5000, "0.5s", "tr");
+                }
+            });
+        } catch (errorMessage) {
+            $('.spinner').fadeOut();
+            snackBar("danger", errorMessage, "✘", 5000, "0.5s", "tr");
+        }
+    }
+        $(document).ready(function () {
+            var startDate = $("#txtstarttDate").val();
+            var endDate = $("#txtendDate").val();
+            var currentDate = new Date().toISOString().split('T')[0];
+            if (startDate === "") {
+                $('#txtstarttDate').val(currentDate);
+            }
+            if (endDate === "") {
+                $('#txtendDate').val(currentDate);
+            }
+        });
+
+
+</script>
+<style>
+    .grid-wrapper {
+        max-height: 300px;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+        .grid-wrapper table thead th {
+            position: sticky;
+            top: 0;
+            background: #0033a0;
+            color: white;
+            z-index: 2;
+        }
+</style>
+
+

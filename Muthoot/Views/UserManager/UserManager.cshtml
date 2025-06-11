@@ -1,0 +1,207 @@
+﻿@model Muthoot.Models.Users
+@{
+    ViewData["Title"] = "UserManager";
+}
+
+<div class="container p-2 rounded" style="margin-top:80px;">
+    <h2 class="text-center p-1 rounded border border-primary text-uppercase" style="background: linear-gradient(to left, #7ecbff, #0033a0); color:white">Add Users</h2>
+    <div class="container p-5 rounded shadow mt-4 bg-white cardbg4">
+        <a href="@Url.Action("Back", "UserManager")"
+           class="btn btn-primary me-2 mb-3 button" style="margin-left:15px;">
+            Back <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="container mt-4">
+
+                
+                <div class="card shadow rounded mb-4 button border-primary">
+                    <div class="card-header text-white d-flex align-items-center" style="background: linear-gradient(to left, #7ecbff, #0033a0);">
+                        <i class="bi bi-person-badge me-2"></i> <strong>User Information</strong>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                @Html.LabelFor(m => m.EmpCode)
+                                @Html.TextBoxFor(m => m.EmpCode, new { @class = "form-control", @id = "txtEmpCode", maxlength = 10 })
+                            </div>
+                            <div class="col-md-4">
+                                @Html.LabelFor(m => m.UserName)
+                                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @id = "txtUserName" })
+                            </div>
+                            <div class="col-md-4">
+                                @Html.LabelFor(m => m.DOJ)
+                                @Html.TextBoxFor(m => m.DOJ, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date", @placeholder = "dd-mm-yyyy", id = "txtdoj" })
+                            </div>
+                            <div class="col-md-4">
+                                @Html.LabelFor(m => m.AmeyoID)
+                                @Html.TextBoxFor(m => m.AmeyoID, new { @class = "form-control", @id = "txtAmeyoid" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card shadow rounded button mb-4 border-primary">
+                    <div class="card-header text-white d-flex align-items-center" style="background: linear-gradient(to left, #7ecbff, #0033a0);">
+                        <i class="bi bi-person-vcard me-2"></i> <strong>Login Information</strong>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                @Html.LabelFor(m => m.UserID)
+                                @Html.TextBoxFor(m => m.UserID, new { @class = "form-control", @id = "txtUserId" })
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    @Html.LabelFor(m => m.Password)
+                                    <div>
+                                        <input type="checkbox" id="toggleFields" title="Enable Password Field" />
+                                        <label for="toggleFields" class="ms-1">Edit</label>
+                                    </div>
+                                </div>
+                                @Html.TextBoxFor(m => m.Password, new { @class = "form-control", @id = "txtpassword", disabled = "disabled", @type = "password" })
+                            </div>
+                            <div class="col-md-4">
+                                @Html.LabelFor(m => m.Privilege)
+                                @Html.DropDownListFor(m => m.Privilege, Model.PrivilegeList, "Select", new { @class = "form-control", @id = "ddlprivilege" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card shadow rounded mb-4 button border-primary">
+                    <div class="card-header text-white d-flex align-items-center" style="background: linear-gradient(to left, #7ecbff, #0033a0);">
+                        <i class="bi bi-geo-alt me-2"></i> <strong>Regional & Status Info</strong>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                @Html.LabelFor(m => m.Region)
+                                @Html.DropDownListFor(m => m.Region, Model.RegionList, "Select", new { @class = "form-control", @id = "ddlRigion" })
+                            </div>
+                            <div class="col-md-4">
+                                @Html.LabelFor(m => m.IsActive)
+                                @Html.DropDownListFor(m => m.IsActive, Model.IsActiveList, null, new { @class = "form-control", @id = "ddlisactive" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="text-center">
+                    <button type="submit" onclick="return Validate()" class="btn btn-lg btn-primary px-5 fw-bold button">
+                        Save <i class="bi bi-save ms-1"></i>
+                    </button>
+                </div>
+
+            </div>
+        }
+    </div>
+    <div class="text-center mt-2"><small>&copy; @DateTime.Now.Year - IMarque. All rights reserved.</small></div>
+</div>
+
+@*<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>*@
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#txtdoj').val('');
+    });
+    $(document).ready(function () {
+        $('#toggleFields').change(function () {
+            $('#txtpassword').prop('disabled', !this.checked);
+        });
+    });
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('#errorMessage').fadeOut('slow');
+            $('#Message').fadeOut('slow');
+        }, 5000);
+    });
+    $('#txtEmpCode').on('keypress', function (e) {
+        let charCode = e.which;
+        if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+            e.preventDefault();
+        }
+    })
+    $('#txtAmeyoid').on('keypress', function (e) {
+        let charCode = e.which;
+
+        if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+            e.preventDefault();
+        }
+    })
+    function Validate() {
+        var EmpCode = $("#txtEmpCode");
+        var userName = $("#txtUserName");
+        var Password = $("#txtpassword");
+        var userId = $("#txtUserId");
+        var doj = $("#txtdoj");
+        var privilege = $("#ddlprivilege");
+        var region = $("#ddlRigion");
+        var ameyoid = $("#txtAmeyoid");
+        var Isactive = $("#ddlisactive");
+        var isChecked = $("#toggleFields").is(":checked");
+
+        if (EmpCode.val().length === 0) {
+            /*alert("Enter the EmployeeCode!");*/
+            snackBar("danger", "Enter the EmployeeCode!", "✘", 5000, "0.5s", "tr");
+            return false;
+        }
+        if (userName.val().length === 0) {
+            /*alert("Enter the UserName!");*/
+            snackBar("danger", "Enter the UserName!", "✘", 5000, "0.5s", "tr");
+            return false;
+        }
+        if (Password.val().length === 0) {
+            /*alert("Enter the Password!");*/
+            snackBar("danger", "Enter the Password!", "✘", 5000, "0.5s", "tr");
+            return false;
+        }
+        if (userId.val().length === 0) {
+            /*alert("Enter the User ID!");*/
+            snackBar("danger", "Enter the User ID!", "✘", 5000, "0.5s", "tr");
+            return false;
+        }
+        if (doj.val().length !== 10) {
+            /*alert("Enter the Date Of Joining!");*/
+            snackBar("danger", "Enter the Date Of Joining!", "✘", 5000, "0.5s", "tr");
+            return false;
+        }
+        if (privilege.val() === "0" || privilege.val() === null || privilege.val() === "") {
+            /*alert("Select The Privilege");*/
+            snackBar("danger", "Select The Privilege", "✘", 5000, "0.5s", "tr");
+            return false;
+        }
+        if (region.val() === "0") {
+            /*alert("Select The Region");*/
+            snackBar("danger", "Select The Region", "✘", 5000, "0.5s", "tr");
+            return false;
+        }
+        if (ameyoid.val().length === 0) {
+            /*alert("Enter The Ameyo ID");*/
+            snackBar("danger", "Enter The Ameyo ID", "✘", 5000, "0.5s", "tr");
+            return false;
+        }
+        return true;
+    }
+    $(document).ready(function () {
+    @if (ViewBag.Message != null)
+    {
+        <text>
+            snackBar("success", "@ViewBag.Message", "✔", 5000, "0.5s", "tr");
+        </text>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <text>
+            snackBar("danger", "@ViewBag.Error", "✘", 5000, "0.5s", "tr");
+        </text>
+    }
+});
+</script>
+
+
+

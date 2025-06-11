@@ -1,0 +1,6 @@
+28-05-2025 11:31:14|Dispose|Phone: 7010335709, CallBackTime: |Status: Entered CallDispose
+28-05-2025 11:31:14|Dispose|Phone: 7010335709, CallBackTime: |Status: Entered TagToDialer
+28-05-2025 11:33:31|Dispose|Phone: 7010335709, CallBackTime: |Status: Entered CallDispose
+28-05-2025 11:33:31|Dispose|Phone: 7010335709, CallBackTime: |Status: Entered TagToDialer
+28-05-2025 11:33:31|Dispose|Phone: 7010335709, CallBackTime: |Status: Entered SecurityProtocolType
+28-05-2025 11:33:31|Dispose|Phone: 7010335709, CallBackTime: |Status: Internal Server Error

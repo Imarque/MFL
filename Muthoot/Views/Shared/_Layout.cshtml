@@ -1,0 +1,407 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Muthoot</title>
+
+    <link rel="stylesheet" href="~/content/jquery/jquery-ui.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/content/js-snackbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/content/loading.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/content/css/all.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/bootstrap/css/bootstrap.min.css" asp-append-version="true" />
+    <link href="~/bootstrap/font/bootstrap-icons.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/semantic/semantic.min.css" asp-append-version="true" />
+    <link rel="icon" type="image/png" href="~/image/imarquelogo (2).png" />
+
+    <style>
+        .background {
+            height: 100%;
+            height: 100vh;
+            background-attachment: fixed;
+            margin: -15px;
+            overflow-x: hidden;
+            margin-top: 0px;
+            background-image: url('../image/sssurf.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .cardbg{
+            background-image: url('../image/sun-tornado.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .cardbg2 {
+            background-image: url('../image/liquid-cheese.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .cardbg3 {
+            background-image: url('../image/oooscillate.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .cardbg4 {
+            background-image: url('../image/parabolic-pentagon (1).svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .cardbg5 {
+            background-image: url('../image/oooscillate (1).svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .cardbg6 {
+            background-image: url('../image/parabolic-rectangle.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .login-container {
+            min-height: 100vh;
+        }
+
+        .loginbox {
+            animation: slideInLeft 1s ease-in-out;
+        }
+
+        @@keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .logo-side {
+            background: linear-gradient(to bottom right, #7ecbff, #0033a0);
+            animation: slideright 1s ease-in-out;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        @@keyframes slideright {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .logo-img {
+            max-width: 200px;
+            width: 100%;
+        }
+
+        .navbar-nav {
+            position: relative;
+        }
+
+        .nav-bg {
+            background: linear-gradient(to right,white,white,white, #7ecbff, #0033a0);
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+            color: white !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        .highlight-bar {
+            position: absolute;
+            bottom: 0;
+            height: 3px;
+            background-color: white;
+            transition: left 1s ease, width 1s ease;
+            z-index: 1;
+        }
+
+        .bottom_border {
+            border-bottom: 10px solid #00ff21;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+        }
+
+        ul li {
+            margin-left: 30px;
+        }
+
+        #navMenu .nav-link:hover {
+            color: #ffffff !important;
+            background-color: #7ecbff;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .logout-link {
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+            .logout-link:hover {
+                background-color: white;
+                color: #0033a0;
+                text-decoration: none;
+            }
+
+        .logout-link-mobile {
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            margin-right: 10px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+            .logout-link-mobile:hover {
+                background: linear-gradient(to left,white,white,white, #7ecbff, #0033a0);
+                color: #0033a0;
+                text-decoration: none;
+            }
+
+        .grid-wrapper {
+            max-height: 300px;
+            overflow-y: auto;
+            overflow-x: auto;
+        }
+
+            .grid-wrapper table thead th {
+                position: sticky;
+                top: 0;
+                background: #0033a0;
+                color: white;
+                z-index: 2;
+                white-space: nowrap;
+                padding: 10px;
+            }
+
+                .grid-wrapper table thead th a {
+                    color: white;
+                    text-decoration: none;
+                }
+
+            .grid-wrapper table tbody td {
+                white-space: nowrap;
+                padding: 10px;
+            }
+
+        .grid-wrappertable {
+            max-height: auto;
+        }
+
+            .grid-wrappertable table thead th {
+                position: sticky;
+                top: 0;
+                background: #0033a0;
+                color: white;
+                z-index: 2;
+                white-space: nowrap;
+                padding: 10px;
+            }
+
+                .grid-wrappertable table thead th a {
+                    color: white;
+                    text-decoration: none;
+                }
+
+            .grid-wrappertable table tbody td {
+                white-space: nowrap;
+                padding: 10px;
+            }
+
+        .grid-wrapper-div {
+            max-height: auto;
+        }
+
+            .grid-wrapper-div table thead th {
+                position: sticky;
+                top: 0;
+                background: #0033a0;
+                color: white;
+                z-index: 2;
+                white-space: nowrap;
+                padding: 5px;
+            }
+
+                .grid-wrapper-div table thead th a {
+                    color: white;
+                    text-decoration: none;
+                }
+
+            .grid-wrapper-div table tbody td:nth-child(even) {
+                white-space: nowrap;
+                padding: 5px;
+                background: #eaf6fd;
+            }
+        .button {
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .button:hover {
+                transform: scale(1.05);
+            }
+
+    </style>
+</head>
+<body class="background">
+    @{
+        var session = HttpContextAccessor.HttpContext.Session;
+        var userDetails = session.GetString("UserDetails");
+        var privilege = session.GetInt32("Privilege");
+        var privilegeName = session.GetString("PrivilegeName");
+        var userName = session.GetString("UserName");
+    }
+
+    @if (!string.IsNullOrEmpty(userDetails))
+    {
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow nav-bg">
+            <div class="container-fluid">
+                <a class="navbar-brand text-primary fw-bold d-flex align-items-center" href="#" style="font-family:'Trebuchet MS', sans-serif;">
+                    <img src="~/image/muthootIcon.png" width="40" class="me-2" />
+                    MUTHOOT
+                </a>
+                <div class="d-block d-md-none text-center p-0">
+                    <img src="~/image/imarquelogoblue.png" width="40" class="me-4" />
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navMenu">
+                        @if (privilege != null && privilege < 5)
+                        {
+                            <li class="nav-item"><a class="nav-link text-primary button text-center p-2" asp-controller="Home" asp-action="Home"><i class="fa-solid fa-house"></i> Home</a></li>
+                            <li class="nav-item dropdown text-center">
+                                <a class="nav-link text-primary dropdown-toggle button" data-bs-toggle="dropdown" href="#">CRM</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="CRM">Calling CRM</a>
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="AgentFollowup">Agent Followup</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-primary button text-center" asp-controller="Report" asp-action="Reports">Reports</a></li>
+                            @* <li class="nav-item dropdown">
+                                <a class="nav-link text-primary dropdown-toggle" data-bs-toggle="dropdown" href="#">Admin</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" asp-controller="UserManager" asp-action="UserList">User Management</a>
+                                    <a class="dropdown-item" asp-controller="Upload" asp-action="Upload">Base Upload</a>
+                                </div>
+                            </li> *@
+                            <li class="nav-item"><a class="nav-link text-primary button text-center" asp-controller="UserManager" asp-action="AdminHome"><i class="fa-solid fa-user-tie"></i>  Administrator</a></li>
+                        }
+                        else if (privilege == 5)
+                        {
+                            <li class="nav-item"><a class="nav-link text-primary button text-center" asp-controller="Home" asp-action="Home"><i class="fa-solid fa-house"></i> Home</a></li>
+                            <li class="nav-item dropdown text-center">
+                                <a class="nav-link text-primary dropdown-toggle button" data-bs-toggle="dropdown" href="#">CRM</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="CRM">Calling CRM</a>
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="AgentFollowup">Agent Followup</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-primary button text-center" asp-controller="Report" asp-action="Reports">Reports</a></li>
+                        }
+                        else if (privilege == 6)
+                        {
+                            <li class="nav-item"><a class="nav-link text-primary text-center" asp-controller="Home" asp-action="Home"><i class="fa-solid fa-house"></i> Home</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-primary dropdown-toggle button" data-bs-toggle="dropdown" href="#">CRM</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="CRM">Calling CRM</a>
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="AgentFollowup">Agent Followup</a>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+
+                    <div class="d-none d-md-block text-end p-2">
+                        <img src="~/image/imarquelogo (1).png" width="40" class="me-4" />
+                    </div>
+                    <div class="d-block d-md-none text-center p-2">
+                        <span class="nav-link d-inline text-primary fw-bold">@privilegeName</span>
+                        <span class="nav-link d-inline text-primary fw-bold">@userName</span>
+                    </div>
+
+                    <div class="d-none d-md-block text-end p-2">
+                        <span class="nav-link d-inline text-white fw-bold">@privilegeName</span>
+                        <span class="nav-link d-inline text-white fw-bold">@userName</span>
+                    </div>
+
+                    <div class="d-block d-md-none text-center mt-2">
+                        <a asp-controller="Login" asp-action="Logout" class="nav-link p-2 logout-link-mobile button text-primary fw-bold">Logout</a>
+                    </div>
+
+                    <div class="d-none d-md-block text-end mt-0">
+                        <a asp-controller="Login" asp-action="Logout" class="nav-link p-2 logout-link button fw-bold">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    }
+
+    <div class="container-fluid login-container d-flex">
+        <div class="spinner" style="display:none">
+            <div class="center-div">
+                <div class="inner-div">
+                    <div class="loader"></div>
+                </div>
+            </div>
+        </div>
+        @RenderBody()
+        <hr />
+    </div>
+    <script src="~/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/scripts/jquery-3.7.0.min.js"></script>
+    <script src="~/scripts/js-snackbar.js"></script>
+    <script src="~/lib/semantic/semantic.min.js"></script>
+    
+
+    @await RenderSectionAsync("scripts", required: false)
+
+    <script>
+        var snackBar = function (status, message, icon, timeout, speed, position) {
+            SnackBar({
+                status: status,   //Default,Success,Warning,Danger,Info//
+                message: message,
+                icon: icon,        //Exclamation,Question,Plus/ We Can Add any Character//
+                timeout: 5000,       // ms //
+                speed: speed,       //speed: 500//
+                position: position,       // tl(Top-Left),tc or tm (Top-Center), bl (Bottom-Left),bc or bm (Bottom-Center),br (Bottom-Right)//
+                fixed: true,
+                //actions: [
+                //                    {
+                //                        text: "Click Me!",
+                //                        function: function () {
+                //                            alert("A-C-T-I-O-N");
+                //                        }
+                //                    }
+                //]
+            })
+        }
+    </script>
+</body>
+</html>

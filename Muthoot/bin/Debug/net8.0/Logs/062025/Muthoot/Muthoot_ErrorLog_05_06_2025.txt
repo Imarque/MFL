@@ -1,0 +1,536 @@
+05-06-2025 12:13:43|Login|ActionResult Login|Session Clear
+05-06-2025 12:13:43|Login|ActionResult Login|Start
+05-06-2025 12:13:48|Login|JsonResult Login|Start
+05-06-2025 12:13:48|Login|JsonResult Login|Login Success
+05-06-2025 12:14:15|Home|QueryString|=======
+05-06-2025 12:14:15|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 12:14:15|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 12:14:15|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 12:16:31|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:16:31|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:39:42|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:39:54|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:40:07|Home|Saving Customer Details In CRM|Enter Try catch
+05-06-2025 12:40:07|Home|Saving Customer Details In CRM|data stored in variables
+05-06-2025 12:40:07|Home|Saving Customer Details In CRM|Details Saved Successfully
+05-06-2025 12:42:31|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:42:31|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:43:50|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:43:50|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:44:00|Home|Saving Customer Details In CRM|Enter Try catch
+05-06-2025 12:44:00|Home|Saving Customer Details In CRM|data stored in variables
+05-06-2025 12:44:00|Home|Saving Customer Details In CRM|Details Saved Successfully
+05-06-2025 12:44:03|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:44:03|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:45:01|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:45:01|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:48:04|Home|QueryString|=======
+05-06-2025 12:48:04|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 12:48:04|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 12:48:04|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 12:48:08|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:48:08|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:48:46|Home|QueryString|=======
+05-06-2025 12:48:46|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 12:48:46|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 12:48:46|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 12:48:50|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:48:50|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:49:05|Home|QueryString|=======
+05-06-2025 12:49:05|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 12:49:05|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 12:49:05|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 12:49:11|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:49:11|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:50:04|Home|QueryString|=======
+05-06-2025 12:50:04|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 12:50:04|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 12:50:04|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 12:50:07|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:50:07|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:50:27|Home|QueryString|=======
+05-06-2025 12:50:27|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 12:50:27|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 12:50:27|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 12:50:31|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:50:31|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:53:02|Home|QueryString|=======
+05-06-2025 12:53:02|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 12:53:02|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 12:53:02|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 12:53:06|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:53:06|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:53:27|Home|QueryString|=======
+05-06-2025 12:53:27|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 12:53:27|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 12:53:27|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 12:53:32|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:53:32|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 12:58:28|Login|ActionResult Login|Session Clear
+05-06-2025 12:58:28|Login|ActionResult Login|Start
+05-06-2025 12:58:34|Login|JsonResult Login|Start
+05-06-2025 12:58:35|Login|JsonResult Login|Login Success
+05-06-2025 12:58:40|Home|QueryString|=======
+05-06-2025 12:58:40|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 12:58:40|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 12:58:40|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 13:00:18|Home|QueryString|=======
+05-06-2025 13:00:18|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 13:00:18|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 13:00:18|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 13:00:38|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 13:00:38|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 13:07:14|Home|QueryString|=======
+05-06-2025 13:07:14|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 13:07:14|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 13:07:14|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 13:07:24|Login|Logout|Logout Done
+05-06-2025 13:07:24|Login|ActionResult Login|Session Clear
+05-06-2025 13:07:24|Login|ActionResult Login|Start
+05-06-2025 13:07:26|Home|QueryString|=======
+05-06-2025 13:07:26|Login|ActionResult Login|Session Clear
+05-06-2025 13:07:26|Login|ActionResult Login|Start
+05-06-2025 13:07:30|Home|QueryString|=======
+05-06-2025 13:07:30|Login|ActionResult Login|Session Clear
+05-06-2025 13:07:30|Login|ActionResult Login|Start
+05-06-2025 13:07:32|Home|QueryString|=======
+05-06-2025 13:07:32|Login|ActionResult Login|Session Clear
+05-06-2025 13:07:32|Login|ActionResult Login|Start
+05-06-2025 13:07:43|UserManager|Upload page open|Start
+05-06-2025 13:07:43|UserManager|Upload page open|END
+05-06-2025 13:07:53|Login|ActionResult Login|Session Clear
+05-06-2025 13:07:53|Login|ActionResult Login|Start
+05-06-2025 13:08:55|Login|JsonResult Login|Start
+05-06-2025 13:08:55|Login|JsonResult Login|Invalid user ID or Wrong Password
+05-06-2025 13:08:58|Login|JsonResult Login|Start
+05-06-2025 13:08:58|Login|JsonResult Login|Login Success
+05-06-2025 13:26:05|Reports|Reports PageLoad|Start
+05-06-2025 13:26:33|Reports|Reports PageLoad|Start
+05-06-2025 13:26:40|Reports|Reports PageLoad|Start
+05-06-2025 13:26:55|Login|ActionResult Login|Session Clear
+05-06-2025 13:26:55|Login|ActionResult Login|Start
+05-06-2025 13:27:00|Login|JsonResult Login|Start
+05-06-2025 13:27:00|Login|JsonResult Login|Login Success
+05-06-2025 13:27:02|Reports|Reports PageLoad|Start
+05-06-2025 13:27:42|Reports|Reports PageLoad|Start
+05-06-2025 13:27:59|Reports|Reports PageLoad|Start
+05-06-2025 13:28:11|Reports|Reports PageLoad|Start
+05-06-2025 13:29:12|Reports|Reports PageLoad|Start
+05-06-2025 13:29:38|Reports|Reports PageLoad|Start
+05-06-2025 13:29:52|Reports|Reports PageLoad|Start
+05-06-2025 13:31:22|Reports|Reports PageLoad|Start
+05-06-2025 13:48:28|Login|ActionResult Login|Session Clear
+05-06-2025 13:48:28|Login|ActionResult Login|Start
+05-06-2025 13:48:37|Login|JsonResult Login|Start
+05-06-2025 13:48:37|Login|JsonResult Login|Login Success
+05-06-2025 13:49:03|Reports|Reports PageLoad|Start
+05-06-2025 13:50:20|Reports|Reports PageLoad|Start
+05-06-2025 13:51:05|Reports|Reports PageLoad|Start
+05-06-2025 14:30:34|Login|ActionResult Login|Session Clear
+05-06-2025 14:30:34|Login|ActionResult Login|Start
+05-06-2025 14:38:18|Login|ActionResult Login|Session Clear
+05-06-2025 14:38:18|Login|ActionResult Login|Start
+05-06-2025 14:38:25|Login|JsonResult Login|Start
+05-06-2025 14:38:25|Login|JsonResult Login|Login Success
+05-06-2025 14:38:27|Home|QueryString|=======
+05-06-2025 14:38:27|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 14:38:27|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 14:38:27|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 14:41:34|Home|QueryString|=======
+05-06-2025 14:41:34|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 14:41:34|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 14:41:34|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 14:42:05|Home|QueryString|=======
+05-06-2025 14:42:05|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 14:42:05|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 14:42:05|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 14:42:57|Login|Logout|Logout Done
+05-06-2025 14:42:57|Login|ActionResult Login|Session Clear
+05-06-2025 14:42:57|Login|ActionResult Login|Start
+05-06-2025 14:43:18|Login|JsonResult Login|Start
+05-06-2025 14:43:18|Login|JsonResult Login|Login Success
+05-06-2025 14:43:22|Login|Logout|Logout Done
+05-06-2025 14:43:22|Login|ActionResult Login|Session Clear
+05-06-2025 14:43:22|Login|ActionResult Login|Start
+05-06-2025 14:43:47|Login|JsonResult Login|Start
+05-06-2025 14:43:47|Login|JsonResult Login|Invalid user ID or Wrong Password
+05-06-2025 14:43:50|Login|JsonResult Login|Start
+05-06-2025 14:43:50|Login|JsonResult Login|Login Success
+05-06-2025 14:43:52|Reports|Reports PageLoad|Start
+05-06-2025 14:44:08|Reports|Reports PageLoad|Start
+05-06-2025 14:44:13|UserManager|Upload page open|Start
+05-06-2025 14:44:13|UserManager|Upload page open|END
+05-06-2025 14:44:28|UserManager|Upload page open|Start
+05-06-2025 14:44:28|UserManager|Upload page open|END
+05-06-2025 14:44:57|UserManager|Adding Users Page Load|Start
+05-06-2025 14:44:57|UserManager|Adding Users Page Load|End
+05-06-2025 14:45:21|UserManager|Adding Users Page Load|Start
+05-06-2025 14:45:21|UserManager|Adding Users Page Load|End
+05-06-2025 14:45:32|UserManager|Users Modified PageLoad|Start
+05-06-2025 14:45:32|UserManager|Users Modified PageLoad|User Details Found
+05-06-2025 14:45:40|UserManager|Users Modified PageLoad|Start
+05-06-2025 14:45:40|UserManager|Users Modified PageLoad|User Details Found
+05-06-2025 14:45:57|UserManager|Adding Users Page Load|Start
+05-06-2025 14:45:57|UserManager|Adding Users Page Load|End
+05-06-2025 14:46:06|Reports|Reports PageLoad|Start
+05-06-2025 14:46:13|Home|QueryString|=======
+05-06-2025 14:46:13|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 14:46:13|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 14:46:13|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 14:47:33|Home|QueryString|=======
+05-06-2025 14:47:33|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 14:47:33|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 14:47:33|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 14:47:41|Reports|Reports PageLoad|Start
+05-06-2025 14:47:48|UserManager|Upload page open|Start
+05-06-2025 14:47:48|UserManager|Upload page open|END
+05-06-2025 14:48:54|Reports|Reports PageLoad|Start
+05-06-2025 14:48:57|Home|QueryString|=======
+05-06-2025 14:48:57|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 14:48:57|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 14:48:57|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 14:49:15|Home|Encryption|Start
+05-06-2025 14:49:15|Home|Encryption|mobilenumberEncypted
+05-06-2025 14:49:15|Home|QueryString|=======
+05-06-2025 14:49:15|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 14:49:15|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 14:49:15|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 14:49:15|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 14:49:15|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 14:50:43|Home|QueryString|=======
+05-06-2025 14:50:43|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 14:50:43|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 14:50:43|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 14:51:29|Home|QueryString|=======
+05-06-2025 14:51:29|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 14:51:29|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 14:51:29|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 14:59:03|Home|QueryString|=======
+05-06-2025 14:59:03|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 14:59:03|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 14:59:03|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 14:59:16|Home|QueryString|=======
+05-06-2025 14:59:16|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 14:59:16|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 14:59:16|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 14:59:23|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 14:59:23|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 14:59:39|Home|Saving Customer Details In CRM|Enter Try catch
+05-06-2025 14:59:39|Home|Saving Customer Details In CRM|data stored in variables
+05-06-2025 14:59:39|Home|Saving Customer Details In CRM|Details Saved Successfully
+05-06-2025 14:59:43|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 14:59:43|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:00:05|Reports|Reports PageLoad|Start
+05-06-2025 15:01:48|Home|QueryString|=======
+05-06-2025 15:01:48|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:01:48|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:01:48|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:01:54|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:01:54|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:02:53|Home|QueryString|=======
+05-06-2025 15:02:53|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:02:53|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:02:53|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:02:55|Home|QueryString|=======
+05-06-2025 15:02:55|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:02:55|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:02:55|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:02:58|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:02:58|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:03:23|Reports|Reports PageLoad|Start
+05-06-2025 15:03:59|UserManager|Upload page open|Start
+05-06-2025 15:03:59|UserManager|Upload page open|END
+05-06-2025 15:04:15|Reports|Reports PageLoad|Start
+05-06-2025 15:05:34|Reports|Reports PageLoad|Start
+05-06-2025 15:05:39|Reports|Reports PageLoad|Start
+05-06-2025 15:06:11|Reports|Reports PageLoad|Start
+05-06-2025 15:06:51|Home|QueryString|=======
+05-06-2025 15:06:51|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:06:51|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:06:51|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:07:03|Reports|Reports PageLoad|Start
+05-06-2025 15:08:27|Reports|Reports PageLoad|Start
+05-06-2025 15:09:04|Reports|Reports PageLoad|Start
+05-06-2025 15:10:43|Reports|Reports PageLoad|Start
+05-06-2025 15:11:05|Home|QueryString|=======
+05-06-2025 15:11:05|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:11:05|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:11:05|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:11:11|Reports|Reports PageLoad|Start
+05-06-2025 15:30:22|Login|ActionResult Login|Session Clear
+05-06-2025 15:30:22|Login|ActionResult Login|Start
+05-06-2025 15:30:47|Login|ActionResult Login|Session Clear
+05-06-2025 15:30:47|Login|ActionResult Login|Start
+05-06-2025 15:30:57|Login|JsonResult Login|Start
+05-06-2025 15:30:58|Login|JsonResult Login|Invalid user ID or Wrong Password
+05-06-2025 15:31:03|Login|JsonResult Login|Start
+05-06-2025 15:31:03|Login|JsonResult Login|Login Success
+05-06-2025 15:31:27|Login|Logout|Logout Done
+05-06-2025 15:31:27|Login|ActionResult Login|Session Clear
+05-06-2025 15:31:27|Login|ActionResult Login|Start
+05-06-2025 15:36:39|Login|ActionResult Login|Session Clear
+05-06-2025 15:36:39|Login|ActionResult Login|Start
+05-06-2025 15:38:10|Login|JsonResult Login|Start
+05-06-2025 15:38:10|Login|JsonResult Login|Login Success
+05-06-2025 15:40:00|Home|QueryString|=======
+05-06-2025 15:40:00|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:40:00|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:40:00|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:40:11|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:40:11|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:40:27|Home|Saving Customer Details In CRM|Enter Try catch
+05-06-2025 15:40:27|Home|Saving Customer Details In CRM|data stored in variables
+05-06-2025 15:40:27|Home|Saving Customer Details In CRM|Details Saved Successfully
+05-06-2025 15:40:30|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:40:30|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:40:49|Home|Saving Customer Details In CRM|Enter Try catch
+05-06-2025 15:40:49|Home|Saving Customer Details In CRM|data stored in variables
+05-06-2025 15:40:49|Home|Saving Customer Details In CRM|Details Saved Successfully
+05-06-2025 15:40:51|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:40:51|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:41:27|Home|Saving Customer Details In CRM|Enter Try catch
+05-06-2025 15:41:27|Home|Saving Customer Details In CRM|data stored in variables
+05-06-2025 15:41:27|Home|Saving Customer Details In CRM|Details Saved Successfully
+05-06-2025 15:41:29|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:41:29|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:45:35|Home|QueryString|=======
+05-06-2025 15:45:35|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:45:35|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:45:35|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:45:41|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:45:41|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 15:52:56|Home|QueryString|=======
+05-06-2025 15:52:56|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:52:56|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:52:56|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:52:57|Home|QueryString|=======
+05-06-2025 15:52:57|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:52:57|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:52:57|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:52:58|Home|QueryString|=======
+05-06-2025 15:52:58|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:52:58|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:52:58|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:53:00|Home|QueryString|=======
+05-06-2025 15:53:00|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:53:00|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:53:00|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:53:01|Home|QueryString|=======
+05-06-2025 15:53:01|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:53:01|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:53:01|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 15:53:02|Home|QueryString|=======
+05-06-2025 15:53:02|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 15:53:02|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 15:53:02|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 16:03:28|Home|QueryString|=======
+05-06-2025 16:03:28|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 16:03:28|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 16:03:28|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 16:03:33|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:03:33|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:03:58|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:03:58|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:04:23|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:04:23|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:04:38|Home|Saving Customer Details In CRM|Enter Try catch
+05-06-2025 16:04:38|Home|Saving Customer Details In CRM|data stored in variables
+05-06-2025 16:04:38|Home|Saving Customer Details In CRM|Details Saved Successfully
+05-06-2025 16:05:15|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:05:15|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:05:48|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:05:48|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:06:33|Home|Saving Customer Details In CRM|Enter Try catch
+05-06-2025 16:06:33|Home|Saving Customer Details In CRM|data stored in variables
+05-06-2025 16:06:33|Home|Saving Customer Details In CRM|Details Saved Successfully
+05-06-2025 16:10:01|Home|QueryString|=======
+05-06-2025 16:10:01|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 16:10:01|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 16:10:01|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 16:10:25|Login|ActionResult Login|Session Clear
+05-06-2025 16:10:25|Login|ActionResult Login|Start
+05-06-2025 16:10:43|Login|ActionResult Login|Session Clear
+05-06-2025 16:10:43|Login|ActionResult Login|Start
+05-06-2025 16:10:49|Login|JsonResult Login|Start
+05-06-2025 16:10:49|Login|JsonResult Login|Login Success
+05-06-2025 16:13:55|Home|QueryString|=======
+05-06-2025 16:13:55|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 16:13:55|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 16:13:55|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 16:13:58|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:13:58|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:14:49|Reports|Reports PageLoad|Start
+05-06-2025 16:15:31|Home|QueryString|=======
+05-06-2025 16:15:31|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 16:15:31|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 16:15:31|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 16:15:40|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:15:40|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:15:57|Home|Saving Customer Details In CRM|Enter Try catch
+05-06-2025 16:15:57|Home|Saving Customer Details In CRM|data stored in variables
+05-06-2025 16:15:57|Home|Saving Customer Details In CRM|Details Saved Successfully
+05-06-2025 16:16:05|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:16:05|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 16:40:02|Reports|Reports PageLoad|Start
+05-06-2025 16:40:38|Home|QueryString|=======
+05-06-2025 16:40:38|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 16:40:38|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 16:40:38|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 16:40:54|Home|QueryString|=======
+05-06-2025 16:40:54|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 16:40:54|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 16:40:54|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 16:41:28|Home|QueryString|=======
+05-06-2025 16:41:28|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 16:41:28|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 16:41:28|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 16:41:33|Reports|Reports PageLoad|Start
+05-06-2025 16:41:35|UserManager|Upload page open|Start
+05-06-2025 16:41:35|UserManager|Upload page open|END
+05-06-2025 16:41:58|Login|Logout|Logout Done
+05-06-2025 16:41:58|Login|ActionResult Login|Session Clear
+05-06-2025 16:41:58|Login|ActionResult Login|Start
+05-06-2025 16:42:06|UserManager|Upload page open|Start
+05-06-2025 16:42:06|UserManager|Upload page open|END
+05-06-2025 16:42:09|Login|ActionResult Login|Session Clear
+05-06-2025 16:42:09|Login|ActionResult Login|Start
+05-06-2025 16:42:13|Login|ActionResult Login|Session Clear
+05-06-2025 16:42:13|Login|ActionResult Login|Start
+05-06-2025 16:42:13|Login|ActionResult Login|Session Clear
+05-06-2025 16:42:13|Login|ActionResult Login|Start
+05-06-2025 17:26:31|Login|ActionResult Login|Session Clear
+05-06-2025 17:26:31|Login|ActionResult Login|Start
+05-06-2025 17:26:37|Home|QueryString|=======
+05-06-2025 17:26:37|Home|QueryString|userId :it_techsupport - Step 1:  QueryString_Validation
+05-06-2025 17:26:37|Home|QueryString|userId :it_techsupport - Step 3: After Validation
+05-06-2025 17:26:37|Home|QueryString|userId :it_techsupport - Step 3: After Dispositionlist
+05-06-2025 17:26:37|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 17:26:37|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 17:26:52|Login|Logout|Logout Done
+05-06-2025 17:26:52|Login|ActionResult Login|Session Clear
+05-06-2025 17:26:52|Login|ActionResult Login|Start
+05-06-2025 17:32:03|Login|ActionResult Login|Session Clear
+05-06-2025 17:32:03|Login|ActionResult Login|Start
+05-06-2025 17:32:25|Login|JsonResult Login|Start
+05-06-2025 17:32:25|Login|JsonResult Login|Invalid user ID or Wrong Password
+05-06-2025 17:32:31|Login|JsonResult Login|Start
+05-06-2025 17:32:31|Login|JsonResult Login|Login Success
+05-06-2025 17:32:38|Reports|Reports PageLoad|Start
+05-06-2025 17:32:51|Home|QueryString|=======
+05-06-2025 17:32:51|Home|QueryString|userId :it_techsupport - Step 1:  QueryString_Validation
+05-06-2025 17:32:51|Home|QueryString|userId :it_techsupport - Step 3: After Validation
+05-06-2025 17:32:51|Home|QueryString|userId :it_techsupport - Step 3: After Dispositionlist
+05-06-2025 17:32:52|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 17:32:52|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 17:33:06|Home|QueryString|=======
+05-06-2025 17:33:06|Home|QueryString|userId :it_techsupport - Step 1:  QueryString_Validation
+05-06-2025 17:33:06|Home|QueryString|userId :it_techsupport - Step 3: After Validation
+05-06-2025 17:33:06|Home|QueryString|userId :it_techsupport - Step 3: After Dispositionlist
+05-06-2025 17:33:06|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 17:33:06|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 17:33:12|Home|Home Iactionresult|'M' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+05-06-2025 17:33:49|Home|QueryString|=======
+05-06-2025 17:33:49|Home|QueryString|userId :it_techsupport - Step 1:  QueryString_Validation
+05-06-2025 17:33:49|Home|QueryString|userId :it_techsupport - Step 3: After Validation
+05-06-2025 17:33:49|Home|QueryString|userId :it_techsupport - Step 3: After Dispositionlist
+05-06-2025 17:33:49|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 17:33:49|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 17:34:35|Home|Home Iactionresult|'M' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+05-06-2025 17:48:03|Home|Home Iactionresult|'M' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+05-06-2025 17:48:10|Login|ActionResult Login|Session Clear
+05-06-2025 17:48:10|Login|ActionResult Login|Start
+05-06-2025 17:48:15|Login|JsonResult Login|Start
+05-06-2025 17:48:15|Login|JsonResult Login|Login Success
+05-06-2025 17:48:19|Reports|Reports PageLoad|Start
+05-06-2025 17:48:42|Reports|Reports PageLoad|Start
+05-06-2025 17:51:08|Reports|Reports PageLoad|Start
+05-06-2025 18:07:28|Reports|Reports PageLoad|Start
+05-06-2025 18:08:26|Reports|Reports PageLoad|Start
+05-06-2025 18:08:48|Reports|Reports PageLoad|Start
+05-06-2025 18:09:24|Reports|Reports PageLoad|Start
+05-06-2025 18:10:51|Home|QueryString|=======
+05-06-2025 18:10:51|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 18:10:51|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 18:10:51|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 18:11:02|Home|QueryString|=======
+05-06-2025 18:11:02|Home|QueryString|userId :it_techsupport - Step 1:  QueryString_Validation
+05-06-2025 18:11:02|Home|QueryString|userId :it_techsupport - Step 3: After Validation
+05-06-2025 18:11:02|Home|QueryString|userId :it_techsupport - Step 3: After Dispositionlist
+05-06-2025 18:11:02|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:11:02|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:12:17|Home|QueryString|=======
+05-06-2025 18:12:17|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 18:12:17|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 18:12:17|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 18:12:33|Home|QueryString|=======
+05-06-2025 18:12:33|Home|QueryString|userId :it_techsupport - Step 1:  QueryString_Validation
+05-06-2025 18:12:33|Home|QueryString|userId :it_techsupport - Step 3: After Validation
+05-06-2025 18:12:33|Home|QueryString|userId :it_techsupport - Step 3: After Dispositionlist
+05-06-2025 18:12:33|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:12:33|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:14:17|Home|Home Iactionresult|'M' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+05-06-2025 18:15:03|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:15:03|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:16:27|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:16:27|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:17:17|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:17:17|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:18:00|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:18:00|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:18:27|Home|Home Iactionresult|'M' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+05-06-2025 18:18:30|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:18:30|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 18:25:12|Login|ActionResult Login|Session Clear
+05-06-2025 18:25:12|Login|ActionResult Login|Start
+05-06-2025 18:25:19|Login|JsonResult Login|Start
+05-06-2025 18:25:19|Login|JsonResult Login|Login Success
+05-06-2025 18:27:48|Login|ActionResult Login|Session Clear
+05-06-2025 18:27:48|Login|ActionResult Login|Start
+05-06-2025 18:27:53|Login|JsonResult Login|Start
+05-06-2025 18:27:53|Login|JsonResult Login|Login Success
+05-06-2025 19:01:37|Login|ActionResult Login|Session Clear
+05-06-2025 19:01:37|Login|ActionResult Login|Start
+05-06-2025 19:02:17|Login|ActionResult Login|Session Clear
+05-06-2025 19:02:17|Login|ActionResult Login|Start
+05-06-2025 19:02:27|Login|ActionResult Login|Session Clear
+05-06-2025 19:02:27|Login|ActionResult Login|Start
+05-06-2025 19:02:28|Login|ActionResult Login|Session Clear
+05-06-2025 19:02:28|Login|ActionResult Login|Start
+05-06-2025 19:03:04|Login|ActionResult Login|Session Clear
+05-06-2025 19:03:04|Login|ActionResult Login|Start
+05-06-2025 19:03:25|Login|ActionResult Login|Session Clear
+05-06-2025 19:03:25|Login|ActionResult Login|Start
+05-06-2025 19:03:54|Login|ActionResult Login|Session Clear
+05-06-2025 19:03:54|Login|ActionResult Login|Start
+05-06-2025 19:04:17|Login|ActionResult Login|Session Clear
+05-06-2025 19:04:17|Login|ActionResult Login|Start
+05-06-2025 19:04:44|Login|ActionResult Login|Session Clear
+05-06-2025 19:04:44|Login|ActionResult Login|Start
+05-06-2025 19:47:50|Login|JsonResult Login|Start
+05-06-2025 19:47:51|Login|JsonResult Login|Login Success
+05-06-2025 19:47:55|Home|QueryString|=======
+05-06-2025 19:47:55|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 19:47:55|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 19:47:55|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 19:48:00|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 19:48:00|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+05-06-2025 20:00:02|Home|QueryString|=======
+05-06-2025 20:00:02|Home|QueryString|userId :1 - Step 2:  Session_Validation
+05-06-2025 20:00:02|Home|QueryString|userId :1 - Step 3: After Validation
+05-06-2025 20:00:02|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+05-06-2025 20:41:05|Reports|Reports PageLoad|Start
+05-06-2025 20:41:06|Login|ActionResult Login|Session Clear
+05-06-2025 20:41:06|Login|ActionResult Login|Start
+05-06-2025 20:41:11|Login|JsonResult Login|Start
+05-06-2025 20:41:11|Login|JsonResult Login|Login Success
+05-06-2025 20:41:15|Home|Get_DashBoards|Column 'CallBackPedingCount' does not belong to table Table1.
+05-06-2025 20:41:23|Home|Get_DashBoards|Column 'CallBackPedingCount' does not belong to table Table1.
+05-06-2025 20:42:00|Home|Get_DashBoards|Column 'CallBackPedingCount' does not belong to table Table1.
+05-06-2025 20:50:20|Reports|Reports PageLoad|Start
+05-06-2025 20:59:16|Reports|Reports PageLoad|Start
+05-06-2025 20:59:39|Login|ActionResult Login|Session Clear
+05-06-2025 20:59:39|Login|ActionResult Login|Start
+05-06-2025 20:59:45|Login|JsonResult Login|Start
+05-06-2025 20:59:46|Login|JsonResult Login|Invalid user ID or Wrong Password
+05-06-2025 20:59:51|Login|JsonResult Login|Start
+05-06-2025 20:59:52|Login|JsonResult Login|Login Success

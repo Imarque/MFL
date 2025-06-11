@@ -1,0 +1,6 @@
+10-06-2025 12:04:17|Login|ActionResult Login|Session Clear
+10-06-2025 12:04:17|Login|ActionResult Login|Start
+10-06-2025 12:04:24|Login|JsonResult Login|Start
+10-06-2025 12:04:25|Login|JsonResult Login|Login Success
+10-06-2025 12:04:57|Reports|Reports PageLoad|Start
+10-06-2025 12:05:37|Reports|Reports PageLoad|Start

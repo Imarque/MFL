@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.105.0" />
+    <PackageReference Include="CsvHelper" Version="33.0.1" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.3.0" />
+    <PackageReference Include="Grid.Mvc" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
+	<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.0" />
+	<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
+	<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+	<PackageReference Include="Nancy" Version="2.0.0" />
+	<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	<PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.5" />
+	<PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\image\imarquelogo %281%29.png" />
+    <None Include="wwwroot\image\imarquelogo.jpg" />
+    <None Include="wwwroot\image\imarquelogoblue.png" />
+    <None Include="wwwroot\image\imqblue.png" />
+    <None Include="wwwroot\image\mothoothomelogo__1_-removebg-preview.png" />
+    <None Include="wwwroot\image\mothoothomelogpng.png" />
+    <None Include="wwwroot\image\muthoot-fincorp-seeklogo.png" />
+    <None Include="wwwroot\image\muthoot-logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="System\Web\" />
+  </ItemGroup>
+
+</Project>

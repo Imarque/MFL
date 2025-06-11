@@ -1,0 +1,141 @@
+﻿@model Muthoot.Models.Upload
+@{
+    ViewData["Title"] = "Upload";
+}
+
+<div class="container p-2 rounded" style="margin-top:80px;">
+    <h2 class="text-center p-1 rounded text-uppercase border border-primary" style="background: linear-gradient(to left, #7ecbff, #0033a0);color:white">Base Upload Panel</h2>
+    <div class="container p-5 rounded shadow bg-white mt-4 cardbg4">
+        @using (Html.BeginForm("Uploadcsv", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <div class="col-md-4 mt-2">
+                    <input type="file" class="form-control border border-primary" id="customFile" name="csvfile" />
+                </div>
+                <div class="col-md-2 mt-2">
+                    @*@Html.DropDownListFor(m => m.uploadType, ViewBag.Type as List<SelectListItem>, "Select", new { @class = "form-control", @id = "ddlType" })*@
+                    @Html.DropDownList("UploadType", new SelectList(ViewBag.Type, "Value", "Text"), "Select Type", new { @class = "form-control border border-primary", Id = "ddlupload" })
+                </div>
+                <div class="col-md-2 mt-2">
+                    <button type="submit" class="btn btn-primary button form-control"><i class="fa-solid fa-upload" id="btnupload" onclick="return ValidateUpload()"></i> Upload</button>
+                </div>
+                <div class="col-md-2 mt-2">
+                    <a href="@Url.Action("DownloadSampleCsv", "Upload")" class="btn btn-outline-success button form-control" id="btnsample" onclick="return ValidateSample()"><i class="fa-solid fa-download"></i>  Sample</a>
+                </div>
+            </div>
+        }
+        @*@if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger text-center mt-3" id="errorMessage">@TempData["ErrorMessage"]</div>
+        }
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success text-center mt-3" id="Message">@TempData["Message"]</div>
+            <script type="text/javascript">
+                snackBar("danger", @TempData["ErrorMessage"], "✘", 5000, "0.5s", "tr");
+            </script>
+        }*@
+        <h4 class="text-center text-uppercase mt-5">Base Upload History</h4>
+        <hr class="border-primary" />
+        <div class="border border-primary rounded mt-0">
+            @if (Model != null && Model.UploadHistory != null && Model.UploadHistory.Any())
+            {
+                <div style="max-height: 500px; overflow: auto; border: 1px solid #ccc;" class="border border-primary rounded">
+                    <table class="table table-bordered table-striped" style="border-collapse: collapse; width: 100%;">
+                        <thead>
+                            <tr style="background-color: #007bff; color: white; position: sticky; top: 0; z-index: 2;">
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">S.No.</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Base Type</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Empolyee Code</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Uploaded By</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Uploaded Count</th>
+                                <th style="padding: 8px; text-align: left; white-space: nowrap; background-color: #0033a0; color: white;">Uploaded Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int serial = 1;
+                            }
+                            @foreach (var item in Model.UploadHistory)
+                            {
+                                <tr>
+                                    <td style="padding: 8px; white-space: nowrap;">@serial</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.BaseType</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.EmpolyeeCode</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.UploadedBy</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.UploadedCount</td>
+                                    <td style="padding: 8px; white-space: nowrap;">@item.UploadedTime</td>
+                                </tr>
+                                serial++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="text-center mt-2"><small>&copy; @DateTime.Now.Year - IMarque. All rights reserved.</small></div>
+</div>
+@*<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>*@
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script>
+        function ValidateUpload() {
+            $('.spinner').css('display', 'block').fadeIn();
+            var file = $("#customFile").val();
+            var dropdown = $("#ddlupload").val();
+
+            if (file == "" || file == null) {
+                /*alert("Please select both From and To dates.");*/
+                $('.spinner').css('display', 'block').fadeOut();
+                snackBar("danger", "Please select a csv file.", "✘", 5000, "0.5s", "tr");
+                return false;
+            }
+            if (dropdown == "" || dropdown == null || dropdown === "0") {
+                /*alert("Please Select The Report Type");*/
+                $('.spinner').css('display', 'block').fadeOut();
+                snackBar("danger", "please select the Base Upload Type", "✘", 5000, "0.5s", "tr");
+                return false;
+            }
+            return true;
+
+        }
+        function ValidateSample() {
+            var dropdown = $("#ddlupload").val();
+            if (dropdown == "" || dropdown == null || dropdown === "0") {
+                /*alert("Please Select The Report Type");*/
+                $('.spinner').css('display', 'block').fadeOut();
+                snackBar("danger", "please select the Base Upload Type", "✘", 5000, "0.5s", "tr");
+                return false;
+            }
+            return true;
+
+        }
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('#errorMessage').fadeOut('slow');
+            }, 5000);
+        });
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('#Message').fadeOut('slow');
+            }, 5000);
+        });
+        $(document).ready(function () {
+    @if (TempData["Message"] != null)
+    {
+        <text>
+                snackBar("success", "@TempData["Message"]", "✔", 5000, "0.5s", "tr");
+                $('.spinner').css('display', 'block').fadeOut();
+        </text>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <text>
+                snackBar("danger", "@TempData["ErrorMessage"]", "✘", 5000, "0.5s", "tr");
+                $('.spinner').css('display', 'block').fadeOut();
+        </text>
+    }
+    });
+</script>
+
+

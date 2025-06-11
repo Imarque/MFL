@@ -1,0 +1,233 @@
+31-05-2025 10:02:28|Login|ActionResult Login|Session Clear
+31-05-2025 10:02:28|Login|ActionResult Login|Start
+31-05-2025 10:02:36|Login|JsonResult Login|Start
+31-05-2025 10:02:37|Login|JsonResult Login|Invalid user ID or Wrong Password
+31-05-2025 10:02:47|Login|JsonResult Login|Start
+31-05-2025 10:02:47|Login|JsonResult Login|Login Success
+31-05-2025 10:02:48|Home|QueryString|=======
+31-05-2025 10:02:48|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 10:02:48|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 10:02:48|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 10:02:54|Reports|Reports PageLoad|Start
+31-05-2025 10:03:15|Home|QueryString|=======
+31-05-2025 10:03:15|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 10:03:15|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 10:03:15|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 10:03:20|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 10:03:20|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 10:04:18|Reports|Reports PageLoad|Start
+31-05-2025 10:04:21|Home|QueryString|=======
+31-05-2025 10:04:21|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 10:04:21|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 10:04:21|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 10:04:35|Home|QueryString|=======
+31-05-2025 10:04:35|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 10:04:35|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 10:04:35|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 10:04:38|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 10:04:38|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 10:08:43|Home|QueryString|=======
+31-05-2025 10:08:43|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 10:08:43|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 10:08:43|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 10:08:46|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 10:08:46|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 10:09:12|Home|QueryString|=======
+31-05-2025 10:09:12|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 10:09:12|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 10:09:12|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 10:13:56|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 10:13:56|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 10:14:43|Home|QueryString|=======
+31-05-2025 10:14:43|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 10:14:43|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 10:14:43|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 10:27:26|Login|ActionResult Login|Session Clear
+31-05-2025 10:27:26|Login|ActionResult Login|Start
+31-05-2025 10:27:33|Login|JsonResult Login|Start
+31-05-2025 10:27:34|Login|JsonResult Login|Invalid user ID or Wrong Password
+31-05-2025 10:27:38|Login|JsonResult Login|Start
+31-05-2025 10:27:38|Login|JsonResult Login|Login Success
+31-05-2025 10:28:09|Home|QueryString|=======
+31-05-2025 10:28:09|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 10:28:09|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 10:28:09|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 10:47:55|Login|ActionResult Login|Session Clear
+31-05-2025 10:47:55|Login|ActionResult Login|Start
+31-05-2025 10:47:59|Login|JsonResult Login|Start
+31-05-2025 10:48:00|Login|JsonResult Login|Login Success
+31-05-2025 10:49:44|Login|ActionResult Login|Session Clear
+31-05-2025 10:49:44|Login|ActionResult Login|Start
+31-05-2025 10:49:58|Login|JsonResult Login|Start
+31-05-2025 10:49:58|Login|JsonResult Login|Login Success
+31-05-2025 11:06:28|Home|QueryString|=======
+31-05-2025 11:06:28|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 11:06:28|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 11:06:28|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 11:06:30|Home|QueryString|=======
+31-05-2025 11:06:30|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 11:06:30|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 11:06:30|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 11:06:34|Login|Logout|Logout Done
+31-05-2025 11:06:34|Login|ActionResult Login|Session Clear
+31-05-2025 11:06:34|Login|ActionResult Login|Start
+31-05-2025 11:07:16|Login|ActionResult Login|Session Clear
+31-05-2025 11:07:16|Login|ActionResult Login|Start
+31-05-2025 11:07:24|Login|JsonResult Login|Start
+31-05-2025 11:07:25|Login|JsonResult Login|Login Success
+31-05-2025 11:08:13|Login|ActionResult Login|Session Clear
+31-05-2025 11:08:13|Login|ActionResult Login|Start
+31-05-2025 11:08:18|Login|JsonResult Login|Start
+31-05-2025 11:08:19|Login|JsonResult Login|Login Success
+31-05-2025 11:11:43|Login|ActionResult Login|Session Clear
+31-05-2025 11:11:43|Login|ActionResult Login|Start
+31-05-2025 11:11:48|Login|JsonResult Login|Start
+31-05-2025 11:11:48|Login|JsonResult Login|Login Success
+31-05-2025 11:51:38|Login|ActionResult Login|Session Clear
+31-05-2025 11:51:38|Login|ActionResult Login|Start
+31-05-2025 11:51:45|Login|JsonResult Login|Start
+31-05-2025 11:51:45|Login|JsonResult Login|Login Success
+31-05-2025 12:52:27|Login|ActionResult Login|Session Clear
+31-05-2025 12:52:27|Login|ActionResult Login|Start
+31-05-2025 12:52:32|Login|JsonResult Login|Start
+31-05-2025 12:52:32|Login|JsonResult Login|Invalid user ID or Wrong Password
+31-05-2025 12:52:35|Login|JsonResult Login|Start
+31-05-2025 12:52:35|Login|JsonResult Login|Login Success
+31-05-2025 12:57:49|Login|ActionResult Login|Session Clear
+31-05-2025 12:57:49|Login|ActionResult Login|Start
+31-05-2025 12:57:59|Login|JsonResult Login|Start
+31-05-2025 12:57:59|Login|JsonResult Login|Login Success
+31-05-2025 13:24:32|Login|ActionResult Login|Session Clear
+31-05-2025 13:24:32|Login|ActionResult Login|Start
+31-05-2025 13:24:37|Login|JsonResult Login|Start
+31-05-2025 13:24:37|Login|JsonResult Login|Login Success
+31-05-2025 13:36:21|Login|ActionResult Login|Session Clear
+31-05-2025 13:36:21|Login|ActionResult Login|Start
+31-05-2025 13:36:28|Login|JsonResult Login|Start
+31-05-2025 13:36:28|Login|JsonResult Login|Login Success
+31-05-2025 14:55:06|Login|ActionResult Login|Session Clear
+31-05-2025 14:55:06|Login|ActionResult Login|Start
+31-05-2025 14:55:12|Login|JsonResult Login|Start
+31-05-2025 14:55:12|Login|JsonResult Login|Login Success
+31-05-2025 15:21:32|Login|ActionResult Login|Session Clear
+31-05-2025 15:21:32|Login|ActionResult Login|Start
+31-05-2025 15:21:38|Login|JsonResult Login|Start
+31-05-2025 15:21:38|Login|JsonResult Login|Invalid user ID or Wrong Password
+31-05-2025 15:21:42|Login|JsonResult Login|Start
+31-05-2025 15:21:42|Login|JsonResult Login|Login Success
+31-05-2025 15:25:26|Home|QueryString|=======
+31-05-2025 15:25:26|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 15:25:26|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 15:25:26|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 15:25:30|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 15:25:30|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 15:25:54|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 15:25:54|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 15:26:01|Home|Saving Customer Details In CRM|Enter Try catch
+31-05-2025 15:26:01|Home|Saving Customer Details In CRM|data stored in variables
+31-05-2025 15:26:01|Home|Saving Customer Details In CRM|Details Saved Successfully
+31-05-2025 15:26:04|Home|QueryString|=======
+31-05-2025 15:26:04|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 15:26:04|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 15:26:04|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 15:31:40|Home|QueryString|=======
+31-05-2025 15:31:40|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 15:31:40|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 15:31:40|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 15:31:48|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 15:31:48|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 15:31:57|Home|Saving Customer Details In CRM|Enter Try catch
+31-05-2025 15:31:57|Home|Saving Customer Details In CRM|data stored in variables
+31-05-2025 15:31:57|Home|Saving Customer Details In CRM|Details Saved Successfully
+31-05-2025 15:45:42|Home|QueryString|=======
+31-05-2025 15:45:42|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 15:45:42|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 15:45:42|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 16:34:34|Login|ActionResult Login|Session Clear
+31-05-2025 16:34:34|Login|ActionResult Login|Start
+31-05-2025 16:34:39|Login|JsonResult Login|Start
+31-05-2025 16:34:39|Login|JsonResult Login|Invalid user ID or Wrong Password
+31-05-2025 16:34:43|Login|JsonResult Login|Start
+31-05-2025 16:34:43|Login|JsonResult Login|Login Success
+31-05-2025 16:45:14|Login|ActionResult Login|Session Clear
+31-05-2025 16:45:14|Login|ActionResult Login|Start
+31-05-2025 16:45:21|Login|JsonResult Login|Start
+31-05-2025 16:45:21|Login|JsonResult Login|Invalid user ID or Wrong Password
+31-05-2025 16:45:25|Login|JsonResult Login|Start
+31-05-2025 16:45:25|Login|JsonResult Login|Login Success
+31-05-2025 16:51:42|Login|ActionResult Login|Session Clear
+31-05-2025 16:51:42|Login|ActionResult Login|Start
+31-05-2025 16:51:50|Login|JsonResult Login|Start
+31-05-2025 16:51:50|Login|JsonResult Login|Invalid user ID or Wrong Password
+31-05-2025 16:51:57|Login|JsonResult Login|Start
+31-05-2025 16:51:57|Login|JsonResult Login|Login Success
+31-05-2025 17:01:07|Home|QueryString|=======
+31-05-2025 17:01:07|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 17:01:07|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 17:01:07|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 17:01:09|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 17:01:09|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+31-05-2025 17:01:13|Home|Saving Customer Details In CRM|Enter Try catch
+31-05-2025 17:01:13|Home|Saving Customer Details In CRM|data stored in variables
+31-05-2025 17:01:13|Home|Saving Customer Details In CRM|Details Saved Successfully
+31-05-2025 17:14:04|UserManager|Upload page open|Start
+31-05-2025 17:14:04|UserManager|Upload page open|END
+31-05-2025 17:14:15|UserManager|CSVUPload|Start
+31-05-2025 17:14:15|UserManager|EncryptedData|Start
+31-05-2025 17:14:17|UserManager|EncryptedData|End
+31-05-2025 17:14:17|UserManager|CSVUPload|CSV Encrypted Successfully
+31-05-2025 17:14:17|UserManager|CSVUPload|Cannot bulk load because the file "D:\CRM\MFL\Uploads\base_upload.csv" could not be opened. Operating system error code 3(The system cannot find the path specified.).
+31-05-2025 17:14:17|UserManager|Upload page open|Start
+31-05-2025 17:14:17|UserManager|Upload page open|END
+31-05-2025 17:14:45|UserManager|CSVUPload|Start
+31-05-2025 17:14:45|UserManager|EncryptedData|Start
+31-05-2025 17:14:47|UserManager|EncryptedData|End
+31-05-2025 17:14:47|UserManager|CSVUPload|CSV Encrypted Successfully
+31-05-2025 17:14:47|UserManager|CSVUPload|Cannot bulk load because the file "D:\CRM\MFL\Uploads\base_upload.csv" could not be opened. Operating system error code 3(The system cannot find the path specified.).
+31-05-2025 17:14:47|UserManager|Upload page open|Start
+31-05-2025 17:14:47|UserManager|Upload page open|END
+31-05-2025 17:15:48|UserManager|CSVUPload|Start
+31-05-2025 17:16:09|UserManager|EncryptedData|Start
+31-05-2025 17:16:12|UserManager|EncryptedData|End
+31-05-2025 17:16:14|UserManager|CSVUPload|CSV Encrypted Successfully
+31-05-2025 17:16:42|UserManager|CSVUPload|Cannot bulk load because the file "D:\CRM\MFL\Uploads\base_upload.csv" could not be opened. Operating system error code 3(The system cannot find the path specified.).
+31-05-2025 17:16:42|UserManager|Upload page open|Start
+31-05-2025 17:16:42|UserManager|Upload page open|END
+31-05-2025 17:16:46|Home|QueryString|=======
+31-05-2025 17:16:46|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 17:16:46|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 17:16:46|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 17:28:41|Home|QueryString|=======
+31-05-2025 17:28:41|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 17:28:41|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 17:28:41|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 18:21:41|Home|QueryString|=======
+31-05-2025 18:21:41|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 18:21:41|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 18:21:41|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 18:21:43|Reports|Reports PageLoad|Start
+31-05-2025 18:22:51|UserManager|Upload page open|Start
+31-05-2025 18:22:51|UserManager|Upload page open|END
+31-05-2025 18:23:02|Home|QueryString|=======
+31-05-2025 18:23:02|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 18:23:02|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 18:23:02|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 18:29:07|Login|Logout|Logout Done
+31-05-2025 18:29:07|Login|ActionResult Login|Session Clear
+31-05-2025 18:29:07|Login|ActionResult Login|Start
+31-05-2025 18:29:13|Login|JsonResult Login|Start
+31-05-2025 18:29:13|Login|JsonResult Login|Login Success
+31-05-2025 18:35:58|UserManager|Upload page open|Start
+31-05-2025 18:35:58|UserManager|Upload page open|END
+31-05-2025 18:36:52|Home|QueryString|=======
+31-05-2025 18:36:52|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 18:36:52|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 18:36:52|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 18:38:04|Home|QueryString|=======
+31-05-2025 18:38:04|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 18:38:04|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 18:38:04|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+31-05-2025 18:41:23|Home|QueryString|=======
+31-05-2025 18:41:23|Home|QueryString|userId :1 - Step 2:  Session_Validation
+31-05-2025 18:41:23|Home|QueryString|userId :1 - Step 3: After Validation
+31-05-2025 18:41:23|Home|QueryString|userId :1 - Step 3: After Dispositionlist

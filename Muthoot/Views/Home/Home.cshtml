@@ -1,0 +1,598 @@
+﻿@model Muthoot.Models.DashBoard
+@{
+    ViewData["Title"] = "Home Page";
+    var userName = Context.Session.GetString("UserName") ?? "User";
+
+    decimal safeTotal = (Model?.OverallBaseCount ?? 0) == 0 ? 1 : Model.OverallBaseCount;
+
+    // decimal pctConnected = Model != null && Model.OverallBaseCount > 0
+    //     ? (decimal)Model.Connected / Model.OverallBaseCount * 100 : 0;
+    // decimal pctNotConnected = Model != null && Model.OverallBaseCount > 0
+    //     ? (decimal)Model.NotConnected / Model.OverallBaseCount * 100 : 0;
+    // decimal pctPending = Model != null && Model.OverallBaseCount > 0
+    //     ? (decimal)Model.Pending / Model.OverallBaseCount * 100 : 0;
+    // decimal pctDisbursal = Model != null && Model.OverallBaseCount > 0
+    //     ? (decimal)Model.Disbursal / Model.OverallBaseCount * 100 : 0;
+}
+
+<style>
+    .card {
+        border-radius: 12px;
+        text-align: center;
+        padding: 1rem;
+    }
+
+        .card .card-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+    .circular-progress {
+        position: relative;
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 0.5rem auto;
+    }
+
+        .circular-progress svg {
+            transform: rotate(-90deg);
+            width: 90px;
+            height: 90px;
+        }
+
+        .circular-progress circle {
+            fill: none;
+            stroke-width: 10;
+            stroke-linecap: round;
+        }
+
+        .circular-progress .bg {
+            stroke: #e9ecef;
+        }
+
+        .circular-progress .progress {
+            stroke: #0d6efd;
+            stroke-dasharray: 251.2;
+            stroke-dashoffset: 251.2;
+            transition: stroke-dashoffset 1s ease-out;
+        }
+
+        .circular-progress .percentage-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0d6efd;
+        }
+
+    .count-text {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #212529;
+    }
+
+    .btn-gradient {
+        background-color: white;
+        color: #007bff;
+        border: 1px solid #007bff;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    /* Gradient style when checked */
+    .btn-check:checked + .btn-gradient {
+        background: linear-gradient(to right, #7ecbff, #0033a0);
+        color: white;
+        border: none;
+        box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+</style>
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script src="~/Scripts/dynamic-table-json-1.2.js"></script>
+
+<div class="container p-3 rounded" style="margin-top:80px;">
+    <h2 class="text-center text-2xl font-bold p-2 rounded border border-primary text-uppercase head"
+        style="background: linear-gradient(to left, #7ecbff, #0033a0); color: white;">
+        dash board
+    </h2>
+    <div class="col-12">
+        <div class="btn-group d-flex" role="group" aria-label="Dashboard toggle group">
+            <input type="radio" class="btn-check" name="DashboardKey" id="btnradio1" value="Calling" autocomplete="off"
+                   onchange="Dashboard()" @(Model.DashboardKey == "Calling" ? "checked" : "") / checked>
+            <label class="btn btn-gradient flex-fill" for="btnradio1">Calling Dashboard</label>
+
+            <input type="radio" class="btn-check" name="DashboardKey" id="btnradio2" value="CallBack" autocomplete="off"
+                   onchange="Dashboard()" @(Model.DashboardKey == "CallBack" ? "checked" : "") />
+            <label class="btn btn-gradient flex-fill" for="btnradio2" id="btnCallback">Followup Dashboard</label>
+        </div>
+    </div>
+    <div class="container mt-4">
+        @if (Model != null)
+        {
+            <div class="row g-4 justify-content-center" id="DivCalling">
+                <div class="col-12 col-md-12 button">
+                    <div class="card shadow-sm border-start border-2 border-primary mt-0 cardbg3">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img src="~/image/mothoothomelogpng.png" width="250" class="img-fluid" />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body text-primary">
+                                    <h6 class="card-title">Total Base Count This Month</h6>
+                                    <div class="count-text fs-4 fw-bold">@Model.OverallBaseCount</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @* ---------------------------------------MTD---------------------------------------------- *@
+                <h5 class="text-center p-1 border border-primary rounded" style="background: linear-gradient(to left, #7ecbff, #0033a0, #7ecbff); color: white">MTD DashBoard</h5>
+                <!-- Dailed -->
+                <div class="col-4 col-md-2">
+                    <div class="card shadow-sm border-start border-2 border-primary button cardbg4">
+                        <div class="card-body text-primary">
+                            <h6 class="card-title">Base Dailed</h6>
+                            <div class="circular-progress" data-percent="@Math.Round(Model.BaseDailedPercentage, 1)">
+                                <svg>
+                                    <circle class="bg" cx="45" cy="45" r="40"></circle>
+                                    <circle class="progress" cx="45" cy="45" r="40"></circle>
+                                </svg>
+                                <div class="percentage-text">@Math.Round(Model.BaseDailedPercentage, 1)%</div>
+                            </div>
+                            <div class="count-text">@Model.BaseDailed</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Connected -->
+                <div class="col-4 col-md-2">
+                    <div class="card shadow-sm border-start border-2 border-primary button cardbg4">
+                        <div class="card-body text-primary">
+                            <h6 class="card-title">Connected</h6>
+                            <div class="circular-progress" data-percent="@Math.Round(Model.ConnectedPercentage, 1)">
+                                <svg>
+                                    <circle class="bg" cx="45" cy="45" r="40"></circle>
+                                    <circle class="progress" cx="45" cy="45" r="40"></circle>
+                                </svg>
+                                <div class="percentage-text">@Math.Round(Model.ConnectedPercentage, 1)%</div>
+                            </div>
+                            <div class="count-text">@Model.Connected</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Not Connected -->
+                <div class="col-4 col-md-2">
+                    <div class="card shadow-sm border-start border-2 border-primary button cardbg4">
+                        <div class="card-body text-primary">
+                            <h6 class="card-title">Not Connected</h6>
+                            <div class="circular-progress" data-percent="@Math.Round(Model.NotConnectedPercentage, 1)">
+                                <svg>
+                                    <circle class="bg" cx="45" cy="45" r="40"></circle>
+                                    <circle class="progress" cx="45" cy="45" r="40"></circle>
+                                </svg>
+                                <div class="percentage-text">@Math.Round(Model.NotConnectedPercentage, 1)%</div>
+                            </div>
+                            <div class="count-text">@Model.NotConnected</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending -->
+                <div class="col-4 col-md-2">
+                    <div class="card shadow-sm border-start border-2 border-primary button cardbg4">
+                        <div class="card-body text-primary">
+                            <h6 class="card-title">Not Dailed</h6>
+                            <div class="circular-progress" data-percent="@Math.Round(Model.PendingPercentage, 1)">
+                                <svg>
+                                    <circle class="bg" cx="45" cy="45" r="40"></circle>
+                                    <circle class="progress" cx="45" cy="45" r="40"></circle>
+                                </svg>
+                                <div class="percentage-text">@Math.Round(Model.PendingPercentage, 1)%</div>
+                            </div>
+                            <div class="count-text">@Model.Pending</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disbursed -->
+                <div class="col-4 col-md-2">
+                    <div class="card shadow-sm border-start border-2 border-primary button cardbg4">
+                        <div class="card-body text-primary">
+                            <h6 class="card-title">Disbursed</h6>
+                            <div class="circular-progress" data-percent="@Math.Round(Model.DisbursalPercentage, 1)">
+                                <svg>
+                                    <circle class="bg" cx="45" cy="45" r="40"></circle>
+                                    <circle class="progress" cx="45" cy="45" r="40"></circle>
+                                </svg>
+                                <div class="percentage-text">@Math.Round(Model.DisbursalPercentage, 1)%</div>
+                            </div>
+                            <div class="count-text">@Model.Disbursal</div>
+                        </div>
+                    </div>
+                </div>
+
+                @* ---------------------------------------FTD---------------------------------------------- *@
+
+                <h5 class="text-center p-1 border border-primary rounded" style="background: linear-gradient(to left, #7ecbff, #0033a0, #7ecbff); color: white">FTD DashBoard</h5>
+                <!-- Dailed -->
+                <div class="col-4 col-md-2">
+                    <div class="card shadow-sm border-start border-2 border-primary button cardbg4">
+                        <div class="card-body text-primary">
+                            <h6 class="card-title">Base Dailed</h6>
+                            <div class="circular-progress" data-percent="@Math.Round(Model.FTDBaseDailedPercentage, 1)">
+                                <svg>
+                                    <circle class="bg" cx="45" cy="45" r="40"></circle>
+                                    <circle class="progress" cx="45" cy="45" r="40"></circle>
+                                </svg>
+                                <div class="percentage-text">@Math.Round(Model.FTDBaseDailedPercentage, 1)%</div>
+                            </div>
+                            <div class="count-text">@Model.FTDBaseDailed</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Connected -->
+                <div class="col-4 col-md-2">
+                    <div class="card shadow-sm border-start border-2 border-primary button cardbg4">
+                        <div class="card-body text-primary">
+                            <h6 class="card-title">Connected</h6>
+                            <div class="circular-progress" data-percent="@Math.Round(Model.FTDConnectedPercentage, 1)">
+                                <svg>
+                                    <circle class="bg" cx="45" cy="45" r="40"></circle>
+                                    <circle class="progress" cx="45" cy="45" r="40"></circle>
+                                </svg>
+                                <div class="percentage-text">@Math.Round(Model.FTDConnectedPercentage, 1)%</div>
+                            </div>
+                            <div class="count-text">@Model.FTDConnected</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Not Connected -->
+                <div class="col-4 col-md-2">
+                    <div class="card shadow-sm border-start border-2 border-primary button cardbg4">
+                        <div class="card-body text-primary">
+                            <h6 class="card-title">Not Connected</h6>
+                            <div class="circular-progress" data-percent="@Math.Round(Model.FTDNotConnectedPercentage, 1)">
+                                <svg>
+                                    <circle class="bg" cx="45" cy="45" r="40"></circle>
+                                    <circle class="progress" cx="45" cy="45" r="40"></circle>
+                                </svg>
+                                <div class="percentage-text">@Math.Round(Model.FTDNotConnectedPercentage, 1)%</div>
+                            </div>
+                            <div class="count-text">@Model.FTDNotConnected</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending -->
+                <div class="col-4 col-md-2">
+                    <div class="card shadow-sm border-start border-2 border-primary button cardbg4">
+                        <div class="card-body text-primary">
+                            <h6 class="card-title">NOT DAILED</h6>
+                            <div class="circular-progress" data-percent="@Math.Round(Model.FTDPendingPercentage, 1)">
+                                <svg>
+                                    <circle class="bg" cx="45" cy="45" r="40"></circle>
+                                    <circle class="progress" cx="45" cy="45" r="40"></circle>
+                                </svg>
+                                <div class="percentage-text">@Math.Round(Model.FTDPendingPercentage, 1)%</div>
+                            </div>
+                            <div class="count-text">@Model.FTDPending</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disbursed -->
+                <div class="col-4 col-md-2">
+                    <div class="card shadow-sm border-start border-2 border-primary button cardbg4">
+                        <div class="card-body text-primary">
+                            <h6 class="card-title">Disbursed</h6>
+                            <div class="circular-progress" data-percent="@Math.Round(Model.FTDDisbursalPercentage, 1)">
+                                <svg>
+                                    <circle class="bg" cx="45" cy="45" r="40"></circle>
+                                    <circle class="progress" cx="45" cy="45" r="40"></circle>
+                                </svg>
+                                <div class="percentage-text">@Math.Round(Model.FTDDisbursalPercentage, 1)%</div>
+                            </div>
+                            <div class="count-text">@Model.FTDDisbursal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CallBack DashBoard -->
+            <div class="row g-4 justify-content-center" id="DivCallBack" style="display:none;">
+                <div class="col-12">
+                    <div class="btn-group d-flex" role="group" aria-label="Followup toggle group">
+                        <input type="radio" class="btn-check" name="FollowupKey" id="followup1" value="callbackfollowup" autocomplete="off"
+                               onchange="FollowupDashboard()" @(Model.FollowupKey == "callbackfollowup" ? "checked" : "") checked/>
+                        <label class="btn btn-gradient flex-fill" for="followup1">CallBacks</label>
+
+                        <input type="radio" class="btn-check" name="FollowupKey" id="followup2" value="1" autocomplete="off"
+                               onchange="FollowupDashboard()" @(Model.FollowupKey == "1" ? "checked" : "") />
+                        <label class="btn btn-gradient flex-fill" for="followup2">User Profile Qualified</label>
+
+                        <input type="radio" class="btn-check" name="FollowupKey" id="followup3" value="2" autocomplete="off"
+                               onchange="FollowupDashboard()" @(Model.FollowupKey == "2" ? "checked" : "") />
+                        <label class="btn btn-gradient flex-fill" for="followup3">Application Fresh Loan</label>
+
+                        <input type="radio" class="btn-check" name="FollowupKey" id="followup4" value="3" autocomplete="off"
+                               onchange="FollowupDashboard()" @(Model.FollowupKey == "3" ? "checked" : "") />
+                        <label class="btn btn-gradient flex-fill" for="followup4">Details Submitted</label>
+
+                        <input type="radio" class="btn-check" name="FollowupKey" id="followup5" value="4" autocomplete="off"
+                               onchange="FollowupDashboard()" @(Model.FollowupKey == "4" ? "checked" : "") />
+                        <label class="btn btn-gradient flex-fill" for="followup5">KYC Success</label>
+
+                        <input type="radio" class="btn-check" name="FollowupKey" id="followup6" value="5" autocomplete="off"
+                               onchange="FollowupDashboard()" @(Model.FollowupKey == "5" ? "checked" : "") />
+                        <label class="btn btn-gradient flex-fill" for="followup6">Forwarded to Credit-UR</label>
+
+                        <input type="radio" class="btn-check" name="FollowupKey" id="followup7" value="6" autocomplete="off"
+                               onchange="FollowupDashboard()" @(Model.FollowupKey == "6" ? "checked" : "") />
+                        <label class="btn btn-gradient flex-fill" for="followup7">Loan Approved</label>
+
+                        <input type="radio" class="btn-check" name="FollowupKey" id="followup8" value="7" autocomplete="off"
+                               onchange="FollowupDashboard()" @(Model.FollowupKey == "7" ? "checked" : "") />
+                        <label class="btn btn-gradient flex-fill" for="followup8">Bank Added</label>
+
+                        <input type="radio" class="btn-check" name="FollowupKey" id="followup9" value="8" autocomplete="off"
+                               onchange="FollowupDashboard()" @(Model.FollowupKey == "8" ? "checked" : "") />
+                        <label class="btn btn-gradient flex-fill" for="followup9">Sign Agreement</label>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <!-- Left Column: CALL BACK FOLLOWUPS -->
+                    <div class="col-lg-12 col-md-12">
+                        <h4 class="text-center p-1 border border-primary rounded mb-3 text-uppercase" id="headtxt"
+                            style="background: linear-gradient(to left, #7ecbff, #0033a0, #7ecbff); color: white">
+                            @Model.FollowupHead
+                        </h4>
+
+                        <!-- TOTAL CALLBACKS (Full Width) -->
+                        <div class="mb-3">
+                            <div class="card shadow-sm border-start border-2 border-primary h-100 button cardbg5">
+                                <div class="card-body text-primary d-flex align-items-center justify-content-center">
+                                    <div class="d-flex align-items-center justify-content-between w-100 px-3">
+                                        <div class="fs-5 fw-semibold me-3 text-uppercase" id="cardtxt">@Model.FollowupHead</div>
+                                        <div class="fs-3 fw-bold text-dark" id="TotalFollowupDisplay">@Model.TotalFollowups</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CALLBACK COMPLETED & CALLBACKS PENDING (Side-by-side) -->
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 mb-3">
+                                <div class="card shadow-sm border-start border-2 border-primary h-100 button cardbg5">
+                                    <div class="card-body text-primary d-flex align-items-center justify-content-center">
+                                        <div class="d-flex align-items-center justify-content-between w-100 px-3">
+                                            <div class="fs-5 fw-semibold me-3">COMPLETED</div>
+                                            <div class="fs-3 fw-bold text-dark" id="CompletedFollowupDisplay">@Model.CompletedFollowups</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-12 mb-3">
+                                <div class="card shadow-sm border-start border-2 border-primary h-100 button cardbg5">
+                                    <div class="card-body text-primary d-flex align-items-center justify-content-center">
+                                        <div class="d-flex align-items-center justify-content-between w-100 px-3">
+                                            <div class="fs-5 fw-semibold me-3">PENDING</div>
+                                            <div class="fs-3 fw-bold text-dark" id="PendingFollowupDisplay">@Model.PendingFollowups</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> 
+                </div>
+                <h2 class="text-center">Agent Wise Pending FollowupList</h2>
+                <hr>
+                <div id="DivFollowupList" class="grid-wrapper-div border border-primary rounded table-responsive"></div>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-warning text-center mt-5" role="alert">
+                Dashboard data not available.
+            </div>
+        }
+    </div>
+    <div class="text-center mt-2"><small>&copy; @DateTime.Now.Year - IMarque. All rights reserved.</small></div>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.circular-progress .progress').each(function () {
+                var $circle = $(this);
+                var $parent = $circle.closest('.circular-progress');
+                var percent = parseFloat($parent.data('percent')) || 0;
+                var radius = 40;
+                var circumference = 2 * Math.PI * radius;
+
+                $circle.css('stroke-dasharray', circumference);
+                var offset = circumference - (percent / 100) * circumference;
+                $circle.css('stroke-dashoffset', offset);
+            });
+
+            snackBar("success", "Welcome @userName", "✔", 5000, "0.5s", "tr");
+        });
+
+        function Dashboard() {
+            var selectedValue = document.querySelector('input[name="DashboardKey"]:checked')?.value;
+
+            var today = new Date();
+            var month = today.getMonth() + 1;
+            var year = today.getFullYear();
+            var monthCode = month.toString() + year.toString();
+
+            console.log("Selected Value:", selectedValue);
+            console.log("Month Code (MYYYY):", monthCode);
+            GetDashBoard(selectedValue, monthCode, today);
+        }
+
+        function GetDashBoard(selectedValue, monthCode, today) {
+            console.log("GetDashBoard called with:", selectedValue, monthCode, today);
+            var MFL = {
+                DashboardKey: selectedValue,
+                monthCode: monthCode,
+                today: today
+            };
+
+            if (selectedValue && selectedValue.trim().length > 0) {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Content("~/Home/Get_DashBoards")',
+                    data: JSON.stringify(MFL),
+                    contentType: "application/json; charset:utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result?.status === "success") {
+                                    if (result.dashboardKey === "Calling") {
+                                        snackBar("success", result.msg, "✔", 5000, "0.5s", "tr");
+                                        $('#DivCallBack').animate({ opacity: 0, top: "+=20px" }, 300, function () {
+                                            $(this).hide().css({ top: "0" });
+                                            $('#DivCalling')
+                                            .css({ display: "none", opacity: 0, top: "-20px", position: "relative" }).show().animate({ opacity: 1, top: "0" }, 400);
+                                        });
+                                        } else if (result.dashboardKey === "CallBack") {
+                                            snackBar("success", result.msg, "✔", 5000, "0.5s", "tr");
+                                            $('#DivCalling').animate({ opacity: 0, top: "+=20px" }, 300, function () {
+                                                $(this).hide().css({ top: "0" });
+                                                $('#DivCallBack')
+                                                .css({ display: "none", opacity: 0, top: "-20px", position: "relative" })
+                                                .show()
+                                                .animate({ opacity: 1, top: "0" }, 400);
+                                            });
+                                            animateCount('#TotalFollowupDisplay', result.totalFollowups);
+                                            animateCount('#CompletedFollowupDisplay', result.completedFollowups);
+                                            animateCount('#PendingFollowupDisplay', result.pendingFollowups);
+                                            $('#headtxt').text(result.followupHead);
+                                            $('#cardtxt').text("TOTAL "+result.followupHead);
+                                            console.log(result);
+                                            Followup_List(monthCode);
+                                            }
+                        } else {
+                            snackBar("danger", result?.msg || "Error occurred", "✘", 5000, "0.5s", "tr");
+                        }
+                    },
+                    error: function () {
+                        snackBar("danger", "AJAX call failed", "✘", 5000, "0.5s", "tr");
+                    }
+                });
+            }
+        }
+
+        function FollowupDashboard() {
+            var selectedValue = document.querySelector('input[name="FollowupKey"]:checked')?.value;
+
+            var today = new Date();
+            var month = today.getMonth() + 1;
+            var year = today.getFullYear();
+            var monthCode = month.toString() + year.toString();
+
+            console.log("Selected Value:", selectedValue);
+            console.log("Month Code (MYYYY):", monthCode);
+            GetFollowupDashBoard(selectedValue, monthCode, today);
+        }
+        function GetFollowupDashBoard(selectedValue, monthCode, today) {
+            console.log("GetDashBoard called with:", selectedValue, monthCode, today);
+            var MFL = {
+                FollowupKey: selectedValue,
+                monthCode: monthCode,
+                today: today
+            };
+
+            if (selectedValue && selectedValue.trim().length > 0) {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Content("~/Home/Get_FollowupDashBoards")',
+                    data: JSON.stringify(MFL),
+                    contentType: "application/json; charset:utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result?.status === "success") {
+                                    snackBar("success", result.msg, "✘", 5000, "0.5s", "tr");
+                                            animateCount('#TotalFollowupDisplay', result.totalFollowups);
+                                            animateCount('#CompletedFollowupDisplay', result.completedFollowups);
+                                            animateCount('#PendingFollowupDisplay', result.pendingFollowups);
+                                            $('#headtxt').text(result.followupHead);
+                                            $('#cardtxt').text("TOTAL "+result.followupHead);
+
+                                    }
+                                    else if (result?.status === "error"){
+                                        snackBar("danger", result.msg, "✘", 5000, "0.5s", "tr");
+                                    }
+                    },
+                    error: function () {
+                        snackBar("danger", "AJAX call failed", "✘", 5000, "0.5s", "tr");
+                    }
+                });
+            }
+        }
+                function animateCount(selector, endValue) {
+                    let $el = $(selector);
+                    let startValue = parseInt($el.text()) || 0;
+                    let duration = 1000;
+                    let stepTime = Math.max(Math.floor(duration / (endValue - startValue || 1)), 20);
+                    let current = startValue;
+                    let increment = endValue > startValue ? 1 : -1;
+
+                    let interval = setInterval(function () {
+                        current += increment;
+                        $el.text(current);
+                        if ((increment > 0 && current >= endValue) || (increment < 0 && current <= endValue)) {
+                            clearInterval(interval);
+                            $el.text(endValue);
+                        }
+                    }, stepTime);
+                    }
+        function Followup_List(monthCode) {
+                        try {
+                            $.ajax({
+                                type: "POST",
+                                url: '@Url.Content("~/")' + "Home/AgentWise_FollowupPeingList?MonthCode="+monthCode,
+                                contentType: "application/json; charset:utf-8",
+                                dataType: "json",
+                                success: function (result) {
+                                    if (result != null) {
+                                        if (result != undefined) {
+                                            console.log(result);
+                                            DynamicTable.renderTable({
+                                                jsonData: result,
+                                                targetElementId: 'DivFollowupList',
+                                                tableClasses: ["table", "table-responsive", "table-bordered"],
+                                                columnModifiers: []
+                                            });
+
+                                        } else {
+                                            snackBar("danger", "undefined", "✘", 5000, "0.5s", "tr");
+                                            return;
+                                        }
+                                    } else {
+                                        snackBar("danger", "Something went wrong", "✘", 5000, "0.5s", "tr");
+                                        return;
+                                    }
+                                },
+                                failure: function (result) {
+                                    snackBar("danger", result.responseText, "✘", 5000, "0.5s", "tr");
+                                    return;
+                                },
+                                error: function (result) {
+                                    snackBar("danger", result.responseText, "✘", 5000, "0.5s", "tr");
+                                    return;
+                                }
+                            });
+
+
+                        } catch (errorMessage) {
+                            snackBar("danger", errorMessage, "✘", 5000, "0.5s", "tr");
+                            return;
+                        }
+        }
+
+    </script>
+}

@@ -1,0 +1,134 @@
+02-06-2025 11:58:49|Login|ActionResult Login|Session Clear
+02-06-2025 11:58:49|Login|ActionResult Login|Start
+02-06-2025 11:58:54|Login|JsonResult Login|Start
+02-06-2025 11:58:55|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 11:58:58|Login|JsonResult Login|Start
+02-06-2025 11:58:58|Login|JsonResult Login|Login Success
+02-06-2025 13:02:46|Login|ActionResult Login|Session Clear
+02-06-2025 13:02:46|Login|ActionResult Login|Start
+02-06-2025 13:02:51|Login|JsonResult Login|Start
+02-06-2025 13:02:51|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 13:02:54|Login|JsonResult Login|Start
+02-06-2025 13:02:54|Login|JsonResult Login|Login Success
+02-06-2025 13:05:43|UserManager|Upload page open|Start
+02-06-2025 13:05:43|UserManager|Upload page open|END
+02-06-2025 13:05:50|Home|QueryString|=======
+02-06-2025 13:05:50|Home|QueryString|userId :1 - Step 2:  Session_Validation
+02-06-2025 13:05:50|Home|QueryString|userId :1 - Step 3: After Validation
+02-06-2025 13:05:50|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+02-06-2025 13:32:36|UserManager|Upload page open|Start
+02-06-2025 13:32:36|UserManager|Upload page open|END
+02-06-2025 13:33:30|UserManager|CSVUPload|Start
+02-06-2025 13:33:41|UserManager|EncryptedData|Start
+02-06-2025 13:33:44|UserManager|EncryptedData|End
+02-06-2025 13:33:45|UserManager|CSVUPload|CSV Encrypted Successfully
+02-06-2025 13:34:11|UserManager|CSVUPload|Cannot bulk load because the file "D:\CRM\MFL\Uploads\base_upload.csv" could not be opened. Operating system error code 3(The system cannot find the path specified.).
+02-06-2025 13:34:11|UserManager|Upload page open|Start
+02-06-2025 13:34:11|UserManager|Upload page open|END
+02-06-2025 15:16:08|Login|ActionResult Login|Session Clear
+02-06-2025 15:16:08|Login|ActionResult Login|Start
+02-06-2025 15:16:18|Login|JsonResult Login|Start
+02-06-2025 15:16:19|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 15:16:24|Login|JsonResult Login|Start
+02-06-2025 15:16:24|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 15:16:29|Login|JsonResult Login|Start
+02-06-2025 15:16:29|Login|JsonResult Login|Login Success
+02-06-2025 16:12:33|Login|ActionResult Login|Session Clear
+02-06-2025 16:12:33|Login|ActionResult Login|Start
+02-06-2025 16:12:43|Login|JsonResult Login|Start
+02-06-2025 16:12:43|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 16:13:00|Login|JsonResult Login|Start
+02-06-2025 16:13:00|Login|JsonResult Login|Login Success
+02-06-2025 16:20:43|Login|ActionResult Login|Session Clear
+02-06-2025 16:20:43|Login|ActionResult Login|Start
+02-06-2025 16:21:08|Login|JsonResult Login|Start
+02-06-2025 16:21:08|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 16:21:54|Login|JsonResult Login|Start
+02-06-2025 16:21:54|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 16:22:05|Login|JsonResult Login|Start
+02-06-2025 16:22:05|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 16:22:08|Login|JsonResult Login|Start
+02-06-2025 16:22:08|Login|JsonResult Login|Login Success
+02-06-2025 16:52:15|Login|ActionResult Login|Session Clear
+02-06-2025 16:52:15|Login|ActionResult Login|Start
+02-06-2025 16:52:26|Login|JsonResult Login|Start
+02-06-2025 16:52:26|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 16:52:35|Login|JsonResult Login|Start
+02-06-2025 16:52:35|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 16:52:38|Login|JsonResult Login|Start
+02-06-2025 16:52:39|Login|JsonResult Login|Login Success
+02-06-2025 16:54:00|Login|ActionResult Login|Session Clear
+02-06-2025 16:54:00|Login|ActionResult Login|Start
+02-06-2025 16:54:09|Login|JsonResult Login|Start
+02-06-2025 16:54:09|Login|JsonResult Login|Login Success
+02-06-2025 18:08:51|Login|ActionResult Login|Session Clear
+02-06-2025 18:08:51|Login|ActionResult Login|Start
+02-06-2025 18:09:06|Login|JsonResult Login|Start
+02-06-2025 18:09:07|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 18:09:15|Login|JsonResult Login|Start
+02-06-2025 18:09:15|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 18:09:24|Login|JsonResult Login|Start
+02-06-2025 18:09:24|Login|JsonResult Login|Login Success
+02-06-2025 18:11:17|Login|ActionResult Login|Session Clear
+02-06-2025 18:11:17|Login|ActionResult Login|Start
+02-06-2025 18:11:25|Login|JsonResult Login|Start
+02-06-2025 18:11:25|Login|JsonResult Login|Login Success
+02-06-2025 18:14:33|Login|ActionResult Login|Session Clear
+02-06-2025 18:14:33|Login|ActionResult Login|Start
+02-06-2025 18:14:38|Login|JsonResult Login|Start
+02-06-2025 18:14:39|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 18:14:42|Login|JsonResult Login|Start
+02-06-2025 18:14:42|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 18:14:48|Login|JsonResult Login|Start
+02-06-2025 18:14:48|Login|JsonResult Login|Login Success
+02-06-2025 18:22:26|Login|ActionResult Login|Session Clear
+02-06-2025 18:22:26|Login|ActionResult Login|Start
+02-06-2025 18:22:50|Login|JsonResult Login|Start
+02-06-2025 18:22:50|Login|JsonResult Login|Login Success
+02-06-2025 18:42:36|Login|ActionResult Login|Session Clear
+02-06-2025 18:42:36|Login|ActionResult Login|Start
+02-06-2025 18:42:43|Login|JsonResult Login|Start
+02-06-2025 18:42:43|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 18:42:53|Login|JsonResult Login|Start
+02-06-2025 18:42:53|Login|JsonResult Login|Login Success
+02-06-2025 19:11:25|Login|ActionResult Login|Session Clear
+02-06-2025 19:11:25|Login|ActionResult Login|Start
+02-06-2025 19:11:31|Login|JsonResult Login|Start
+02-06-2025 19:11:32|Login|JsonResult Login|Login Success
+02-06-2025 19:52:30|Login|ActionResult Login|Session Clear
+02-06-2025 19:52:30|Login|ActionResult Login|Start
+02-06-2025 19:52:36|Login|JsonResult Login|Start
+02-06-2025 19:52:36|Login|JsonResult Login|Invalid user ID or Wrong Password
+02-06-2025 19:52:40|Login|JsonResult Login|Start
+02-06-2025 19:52:40|Login|JsonResult Login|Login Success
+02-06-2025 19:52:58|Login|ActionResult Login|Session Clear
+02-06-2025 19:52:58|Login|ActionResult Login|Start
+02-06-2025 19:53:03|Login|ActionResult Login|Session Clear
+02-06-2025 19:53:03|Login|ActionResult Login|Start
+02-06-2025 19:53:11|Login|JsonResult Login|Start
+02-06-2025 19:53:11|Login|JsonResult Login|Login Success
+02-06-2025 20:33:44|Reports|Reports PageLoad|Start
+02-06-2025 20:33:51|UserManager|Upload page open|Start
+02-06-2025 20:33:51|UserManager|Upload page open|END
+02-06-2025 20:33:55|Reports|Reports PageLoad|Start
+02-06-2025 20:33:56|Home|QueryString|=======
+02-06-2025 20:33:56|Home|QueryString|userId :1 - Step 2:  Session_Validation
+02-06-2025 20:33:56|Home|QueryString|userId :1 - Step 3: After Validation
+02-06-2025 20:33:56|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+02-06-2025 20:34:04|Home|QueryString|=======
+02-06-2025 20:34:04|Home|QueryString|userId :1 - Step 2:  Session_Validation
+02-06-2025 20:34:04|Home|QueryString|userId :1 - Step 3: After Validation
+02-06-2025 20:34:04|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+02-06-2025 20:34:37|Home|QueryString|=======
+02-06-2025 20:34:37|Home|QueryString|userId :1 - Step 2:  Session_Validation
+02-06-2025 20:34:37|Home|QueryString|userId :1 - Step 3: After Validation
+02-06-2025 20:34:37|Home|QueryString|userId :1 - Step 3: After Dispositionlist
+02-06-2025 20:34:48|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+02-06-2025 20:34:48|Home|Get_CustomerDetails|Customer Deatils Fetached From DB
+02-06-2025 20:53:40|Login|ActionResult Login|Session Clear
+02-06-2025 20:53:40|Login|ActionResult Login|Start
+02-06-2025 20:53:49|Login|JsonResult Login|Start
+02-06-2025 20:53:50|Login|JsonResult Login|Login Success
+02-06-2025 20:57:00|Login|Logout|Logout Done
+02-06-2025 20:57:00|Login|ActionResult Login|Session Clear
+02-06-2025 20:57:00|Login|ActionResult Login|Start

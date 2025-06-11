@@ -1,0 +1,190 @@
+﻿@model Muthoot.Models.Reports
+@{
+    ViewData["Title"] = "Reports";
+}
+<div class="container p-2 rounded" style="margin-top:80px;">
+    @{
+        var session = Context.Session;
+        var userDetails = session.GetString("UserDetails");
+        var privilege = session.GetInt32("Privilege");
+        var privilegeName = session.GetString("PrivilegeName");
+        var userName = session.GetString("UserName");
+    }
+
+    <h2 class="text-center p-1 rounded text-uppercase border border-primary" style="background: linear-gradient(to left, #7ecbff, #0033a0);color:white">Reports</h2>
+    <div class="container p-5 rounded shadow mt-4 bg-white cardbg4">
+        <div class="row">
+            @using (Html.BeginForm("Reports", "Report", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-lg-2 col-md-6 col-sm-6 mt-lg-0 mt-2">
+                        @Html.LabelFor(m => m.FromDate)
+                        @Html.TextBoxFor(m => m.FromDate, new { @type = "date", @class = "form-control border border-primary", @id = "txtstarttDate" })
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 mt-lg-0 mt-2">
+                        @Html.LabelFor(m => m.ToDate)
+                        @Html.TextBoxFor(m => m.ToDate, new { @type = "date", @class = "form-control border border-primary", @id = "txtendDate" })
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-sm-12 mt-lg-0 mt-2">
+                        @Html.LabelFor(m => m.Report)
+                        @Html.DropDownListFor(m => m.Report, Model.ReportList, "Select Type", new { @class = "form-control border border-primary", @id = "ddlreport" })
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-sm-12 mt-lg-4 mt-2">
+                        <button type="button" name="actionType" value="Show" id="btnShow" class="btn btn-primary button form-control">
+                            <i class="fa-solid fa-eye"></i> Show
+                        </button>
+                    </div>
+                    @if (@privilege<5)
+                    {
+                        <div class="col-lg-2 col-md-12 col-sm-12 mt-lg-4 mt-2">
+                            <button type="submit" onclick="return Validate()" class="btn btn-primary button form-control">
+                                <i class="fa-solid fa-file-export"></i> Export
+                            </button>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+        <div class="mt-5 d-flex align-items-center gap-2">
+            <label for="count" class="text-success fw-bold fst-italic mb-0">
+                <i class="bi bi-search"></i> Total Records Found:
+            </label>
+            <span id="count" class="text-success fw-bold fs-5"></span>
+        </div>
+        <h4 class="text-center p-1 mt-4 rounded-5 text-uppercase">Reports</h4>
+        <hr />
+        <div id="DivTempTable1" class="grid-wrapper border border-primary rounded table-responsive"></div>
+    </div>
+    <div class="text-center mt-2"><small>&copy; @DateTime.Now.Year - IMarque. All rights reserved.</small></div>
+</div>
+@*<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>*@
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script src="~/Scripts/dynamic-table-json-1.2.js"></script>
+<script>
+    function Validate() {
+            var startDate = $("#txtstarttDate").val();
+            var endDate = $("#txtendDate").val();
+            var report = $("#ddlreport").val();
+
+            if (!startDate || !endDate) {
+                /*alert("Please select both From and To dates.");*/
+                snackBar("danger", "Please select both From and To dates.", "✘", 5000, "0.5s", "tr");
+                return false;
+            }
+
+            if (new Date(startDate) > new Date(endDate)) {
+                /*alert("From Date cannot be later than To Date.");*/
+                snackBar("danger", "From Date cannot be later than To Date.", "✘", 5000, "0.5s", "tr");
+                return false;
+            }
+            if (report == "" || report == null) {
+                /*alert("Please Select The Report Type");*/
+                $('.spinner').css('display', 'block').fadeOut();
+                snackBar("danger", "Please Select The Report Type", "✘", 5000, "0.5s", "tr");
+                return false;
+            }
+            return true;
+        }
+        $(function () {
+        $('#btnShow').click(function(){
+            $('.spinner').css('display', 'block').fadeIn();
+            var startDate = $("#txtstarttDate").val();
+            var endDate = $("#txtendDate").val();
+            var report = $("#ddlreport").val();
+
+            if (!startDate || !endDate) {
+                /*alert("Please select both From and To dates.");*/
+                $('.spinner').css('display', 'block').fadeOut();
+                snackBar("danger", "Please select both From and To dates.", "✘", 5000, "0.5s", "tr");
+                return false;
+            }
+
+            if (new Date(startDate) > new Date(endDate)) {
+                /*alert("From Date cannot be later than To Date.");*/
+                $('.spinner').css('display', 'block').fadeOut();
+                snackBar("danger", "From Date cannot be later than To Date.", "✘", 5000, "0.5s", "tr");
+                return false;
+            }
+            if (report == "" || report == null) {
+                /*alert("Please Select The Report Type");*/
+                $('.spinner').css('display', 'block').fadeOut();
+                snackBar("danger", "Please Select The Report Type", "✘", 5000, "0.5s", "tr");
+                return false;
+            }
+            showReport_List(startDate, endDate,report);
+            console.log("left The first function");
+        });
+        });
+        function showReport_List(startDate, endDate,report) {
+                    try {
+                        $.ajax({
+                            type: "GET",
+                            url: '@Url.Content("~/")' + "Report/ShowReport_List?StartDate="+startDate+"&EndDate="+endDate+"&ReportType="+report,
+                            contentType: "application/json; charset:utf-8",
+                            dataType: "json",
+                            success: function (result) {
+                                if (result != null) {
+                                    if (result != undefined) {
+                                        if(result.status=="success")
+                                        {
+                                        console.log(result);
+                                        $('#count').text(result.recordsCount)
+                                        DynamicTable.renderTable({
+                                            jsonData: result.reportRows,
+                                            targetElementId: 'DivTempTable1',
+                                            tableClasses: ["table", "table-responsive", "table-bordered"],
+                                            columnModifiers: []
+                                        });
+                                        snackBar("success", result.msg, "✔", 5000, "0.5s", "tr");
+                                        $('.spinner').css('display', 'block').fadeOut();
+                                        }
+                                        else if(result.status=="error")
+                                        {
+                                            $('#count').text(result.recordsCount);
+                                            $('#DivTempTable1').empty();
+                                            snackBar("danger", result.msg, "✘", 5000, "0.5s", "tr");
+                                            $('.spinner').css('display', 'block').fadeOut();
+                                        }
+                                    } else {
+                                        snackBar("danger", "undefined", "✘", 5000, "0.5s", "tr");
+                                        $('.spinner').css('display', 'block').fadeOut();
+                                        return;
+                                    }
+                                } else {
+                                    snackBar("danger", "Something went wrong", "✘", 5000, "0.5s", "tr");
+                                    $('.spinner').css('display', 'block').fadeOut();
+                                    return;
+                                }
+                            },
+                            failure: function (result) {
+                                snackBar("danger", result.responseText, "✘", 5000, "0.5s", "tr");
+                                $('.spinner').css('display', 'block').fadeOut();
+                                return;
+                            },
+                            error: function (result) {
+                                snackBar("danger", result.responseText, "✘", 5000, "0.5s", "tr");
+                                $('.spinner').css('display', 'block').fadeOut();
+                                return;
+                            }
+                        });
+
+
+                    } catch (errorMessage) {
+                        snackBar("danger", errorMessage, "✘", 5000, "0.5s", "tr");
+                        return;
+                    }
+    }
+        $(document).ready(function () {
+            var startDate = $("#txtstarttDate").val();
+            var endDate = $("#txtendDate").val();
+            var currentDate = new Date().toISOString().split('T')[0];
+            if (startDate === "") {
+                $('#txtstarttDate').val(currentDate);
+            }
+            if (endDate === "") {
+                $('#txtendDate').val(currentDate);
+            }
+        });
+</script>
+
